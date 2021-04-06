@@ -5,6 +5,8 @@
   --accent-text-color: #2196f3;
   --white-color: #ffffff;
   --transparent-white-color: rgba(255, 255, 255, 0.6);
+  --bgr-accent-color: #f5f4fa;
+  --bgr-dark-color: #2f303a;
 }
 
 body {
@@ -64,6 +66,10 @@ a {
   color: var(--accent-text-color);
 }
 /* 1 section */
+.hero {
+  background-color: var(--bgr-dark-color);
+}
+
 .hero-title {
   color: var(--white-color);
   font-weight: 900;
@@ -72,7 +78,6 @@ a {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  background-color: #2f303a;
 }
 
 .btn {
@@ -83,6 +88,7 @@ a {
   line-height: 1.87;
   text-align: center;
   letter-spacing: 0.06em;
+  cursor: pointer;
 }
 
 /* 2 section */
@@ -109,6 +115,10 @@ a {
 }
 
 /* 4 section */
+.team {
+  background-color: var(--bgr-accent-color);
+}
+
 .team .title {
   color: var(--title-text-color);
   font-weight: 700;
@@ -130,9 +140,12 @@ a {
 }
 
 /* Footer */
+.footer {
+  background-color: var(--bgr-dark-color);
+}
+
 .footer .logo {
   color: var(--white-color);
-  background-color: #2f303a;
 }
 
 .footer .address {
@@ -151,13 +164,19 @@ a {
   font-style: normal;
 }
 
+.footer .contacts:hover,
+.footer .contacts:focus {
+  color: var(--accent-text-color);
+}
+
 /* Portfolio */
 .gallery .btn {
   font-weight: 500;
   line-height: 1.62;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
-  background-color: #f5f4fa;
+  background-color: var(--bgr-accent-color);
+  cursor: pointer;
 }
 
 .gallery .btn:hover,
