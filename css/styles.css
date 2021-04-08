@@ -94,19 +94,18 @@ body {
 
 /* 2 section */
 .visually-hidden {
-  position: absolute !important;
+  position: absolute;
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
   overflow: hidden;
 }
 
 .features .subtitle {
   color: var(--title-text-color);
-  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
@@ -121,7 +120,6 @@ body {
 .work .title,
 .team .title {
   color: var(--title-text-color);
-  font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
@@ -189,8 +187,7 @@ body {
   background-color: var(--accent-text-color);
 }
 
-.gallery .title {
-  font-weight: 700;
+.list .title {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
