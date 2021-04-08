@@ -16,11 +16,11 @@ body {
   color: var(--main-text-color);
 }
 
-ul {
+.list {
   list-style: none;
 }
 
-a {
+.link {
   text-decoration: none;
 }
 
@@ -65,6 +65,7 @@ a {
 .auth .link:focus {
   color: var(--accent-text-color);
 }
+
 /* 1 section */
 .hero {
   background-color: var(--bgr-dark-color);
@@ -92,9 +93,20 @@ a {
 }
 
 /* 2 section */
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
 .features .subtitle {
   color: var(--title-text-color);
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
@@ -105,26 +117,18 @@ a {
   line-height: 1.71;
 }
 
-/* 3 section */
-.work .title {
-  color: var(--title-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-}
-
-/* 4 section */
-.team {
-  background-color: var(--bgr-accent-color);
-}
-
+/* 3 section & 4 section */
+.work .title,
 .team .title {
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+}
+
+.team {
+  background-color: var(--bgr-accent-color);
 }
 
 .team .subtitle {
@@ -169,7 +173,7 @@ a {
   color: var(--accent-text-color);
 }
 
-/* Portfolio */
+/* Portfolio Page*/
 .gallery .btn {
   font-weight: 500;
   line-height: 1.62;
