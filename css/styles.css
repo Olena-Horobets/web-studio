@@ -9,6 +9,15 @@
   --bgr-dark-color: #2f303a;
 }
 
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.03em;
@@ -16,12 +25,41 @@ body {
   color: var(--main-text-color);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .list {
   list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 .link {
   text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  /* align-content: center; */
+  outline: 2px solid tomato;
 }
 
 /* Header */
@@ -69,6 +107,9 @@ body {
 /* 1 section */
 .hero {
   background-color: var(--bgr-dark-color);
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
 }
 
 .hero-title {
@@ -79,6 +120,8 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  margin-bottom: 30px;
 }
 
 .btn {
@@ -90,9 +133,19 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   cursor: pointer;
+
+  display: inline-block;
+  min-width: 200px;
+  padding: 10px 32px;
+  border: none;
+  border-radius: 4px;
 }
 
 /* 2 section */
+.features {
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
 .visually-hidden {
   position: absolute;
   clip: rect(1px 1px 1px 1px);
@@ -123,22 +176,38 @@ body {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+
+  margin-bottom: 50px;
 }
 
 .team {
   background-color: var(--bgr-accent-color);
+  padding-top: 95px;
+  padding-bottom: 95px;
 }
 
+.card {
+  background-color: var(--white-color);
+  width: 270px;
+  height: 368px;
+  border-radius: 4px;
+  text-align: center;
+  padding-bottom: 30px;
+}
 .team .subtitle {
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
+
+  margin-top: 30px;
 }
 
 .team .text {
   font-size: 16px;
   line-height: 1.2;
+
+  margin-top: 10px;
 }
 
 /* Footer */
