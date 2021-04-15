@@ -59,6 +59,11 @@ img {
 
 /* Header */
 .header {
+  border-bottom: 1px solid rgba(236, 236, 236, 1);
+}
+
+.main-nav,
+.nav {
   display: flex;
   align-items: center;
 }
@@ -167,8 +172,8 @@ img {
 
 /* 2 section */
 .features {
-  padding-top: 95px;
-  padding-bottom: 95px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .visually-hidden {
   position: absolute;
@@ -208,7 +213,7 @@ img {
 
 /* 3 section & 4 section */
 .work {
-  padding-bottom: 95px;
+  padding-bottom: 94px;
 }
 .work .list {
   display: flex;
@@ -227,8 +232,8 @@ img {
 }
 
 .team {
-  padding-top: 95px;
-  padding-bottom: 95px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 
   background-color: var(--bgr-accent-color);
   padding-top: 95px;
@@ -309,8 +314,8 @@ img {
 
 /* Portfolio Page*/
 .gallery {
-  padding-top: 95px;
-  padding-bottom: 95px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .filter {
@@ -350,7 +355,6 @@ img {
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
-  border: 1px solid #eeeeee;
 }
 
 .gallery-card:nth-child(3n) {
@@ -362,7 +366,8 @@ img {
 }
 
 .gallery-card .label {
-  margin: 20px 24px;
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
 }
 
 .gallery-card .title {
