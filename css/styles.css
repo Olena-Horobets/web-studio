@@ -68,7 +68,7 @@ img {
   align-items: center;
 }
 
-.nav,
+.nav-list,
 .auth {
   display: flex;
 }
@@ -95,7 +95,7 @@ img {
   color: var(--accent-text-color);
 }
 
-.nav .link {
+.nav-list .link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -107,12 +107,12 @@ img {
   letter-spacing: 0.02em;
 }
 
-.nav .link.current {
+.nav-list .link.current {
   color: var(--accent-text-color);
 }
 
-.nav .link:hover,
-.nav .link:focus {
+.nav-list .link:hover,
+.nav-list .link:focus {
   color: var(--accent-text-color);
 }
 
