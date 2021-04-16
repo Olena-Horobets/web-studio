@@ -249,7 +249,6 @@ img {
 .card {
   background-color: var(--white-color);
   width: 270px;
-  height: 368px;
   border-radius: 4px;
   text-align: center;
   border-radius: 0 0 4px 4px;
@@ -258,8 +257,8 @@ img {
 }
 
 .card .label {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .team .subtitle {
@@ -298,7 +297,7 @@ img {
   font-style: normal;
 }
 
-.footer address:not(last-child) {
+.footer address:not(:last-child) {
   margin-bottom: 10px;
 }
 
@@ -339,7 +338,7 @@ img {
   cursor: pointer;
 }
 
-.filter .btn:not(last-child) {
+.filter .filter-item:not(:last-child) {
   margin-right: 8px;
 }
 
