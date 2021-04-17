@@ -356,7 +356,7 @@ img {
 }
 
 .gallery-card {
-  flex-basis: ((100% - 2 * var(--space-btw-elements)) /3);
+  flex-basis: calc((100% - 2 * var(--space-btw-elements)) / 3);
   margin-bottom: var(--space-btw-elements);
 }
 
