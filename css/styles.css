@@ -171,6 +171,10 @@ img {
   border-radius: 4px;
 }
 
+.btn:hover,
+.btn:focus {
+  background-color: #188ce8;
+}
 /* 2 section */
 .features {
   padding-top: 94px;
