@@ -7,9 +7,11 @@
   --transparent-white-color: rgba(255, 255, 255, 0.6);
   --bgr-accent-color: #f5f4fa;
   --bgr-dark-color: #2f303a;
+  --icons-color: #afb1b8;
   --space-btw-elements: 30px;
 }
 
+/*#region Utilities */
 html {
   box-sizing: border-box;
 }
@@ -58,7 +60,19 @@ img {
   margin-right: auto;
 }
 
-/* Header */
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+/*#endregion Utilities */
+
+/*#region Header */
 .header {
   border-bottom: 1px solid rgba(236, 236, 236, 1);
 }
@@ -133,21 +147,26 @@ img {
 .auth .link:focus {
   color: var(--accent-text-color);
 }
+/*#endregion Header */
 
-/* 1 section */
+/*#region 1 section Hero */
+
 .hero {
-  background-color: var(--bgr-dark-color);
+  max-width: 1600px;
+  min-height: 100vh;
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 
+  background-color: var(--bgr-dark-color);
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/background-image.jpg);
-  min-width: 1600px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -186,20 +205,13 @@ img {
 .btn:focus {
   background-color: #188ce8;
 }
-/* 2 section */
+/*#endregion 1 section Hero */
+
+/*#region 2 section Features */
+
 .features {
   padding-top: 94px;
   padding-bottom: 94px;
-}
-.visually-hidden {
-  position: absolute;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0;
-  border: 0;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
 }
 
 .features .list {
@@ -254,8 +266,9 @@ img {
 .features .item:nth-child(4)::before {
   background-image: url(../images/features/astronaut.svg);
 }
+/*#endregion 2 section Features */
 
-/* 3 section & 4 section & 5 section */
+/*#region 3 section & 4 section & 5 section */
 .work {
   padding-bottom: 94px;
 }
@@ -282,6 +295,7 @@ img {
   flex-basis: calc((100% - 2 * var(--space-btw-elements)) / 3);
 }
 
+/* Team */
 .team {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -300,8 +314,7 @@ img {
 }
 
 .card .label {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 32px;
 }
 
 .team .subtitle {
@@ -316,26 +329,70 @@ img {
   font-size: 16px;
   line-height: 1.2;
 
-  margin-bottom: 0px;
+  margin-bottom: 16px;
 }
 
+/* Social links  */
+.social-list {
+  display: flex;
+  justify-content: space-between;
+}
+.social-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  text-decoration: none;
+  color: var(--icons-color);
+  background-color: inherit;
+  fill: currentColor;
+}
+
+.social-link:hover,
+.social-link:focus {
+  color: var(--white-color);
+  background-color: var(--accent-text-color);
+}
+
+/* Clients */
 .clients {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
-.clients .list {
+.clients-list {
   display: flex;
   justify-content: space-between;
 }
 
-.clients .item {
-  outline: 1px solid red;
-  flex-basis: calc((100% - 5 * var(--space-btw-elements)) / 6);
-  height: 30px;
+.clients-list .item:not(:last-child) {
+  margin-right: var(--space-btw-elements);
 }
 
-/* Footer */
+.client-link {
+  width: 170px;
+  height: 92px;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 4px;
+  border: 1px solid var(--icons-color);
+  fill: var(--icons-color);
+}
+
+.client-link:hover,
+.client-link:focus {
+  border-color: var(--accent-text-color);
+  fill: var(--accent-text-color);
+}
+/*#endregion 3 section & 4 section & 5 section */
+
+/*#region Footer */
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -385,12 +442,12 @@ img {
   text-transform: uppercase;
 }
 
-.contacts-list {
+.socials {
   display: flex;
   outline: plum;
 }
 
-.contacts-list > .item:not(:last-child) {
+.socials > .item:not(:last-child) {
   margin-right: 10px;
 }
 
@@ -400,13 +457,17 @@ img {
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
   outline: 1px solid red;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .instagram {
   background-image: url(../images/contacts/instagram.svg);
 }
+/*#endregion Footer */
 
-/* Portfolio Page*/
+/*#region Portfolio Page*/
 .gallery {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -478,3 +539,4 @@ img {
   font-size: 16px;
   line-height: 1.87;
 }
+/*#endregion Portfolio Page */
