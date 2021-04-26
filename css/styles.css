@@ -451,6 +451,7 @@ img {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  font-weight: 700;
 }
 
 .social-list > .item:not(:last-child) {
@@ -458,6 +459,7 @@ img {
 }
 .social-link {
   background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--white-color);
 }
 /*#endregion Footer */
 
