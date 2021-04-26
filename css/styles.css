@@ -333,7 +333,6 @@ img {
 .team .text {
   font-size: 16px;
   line-height: 1.2;
-
   margin-bottom: 16px;
 }
 
@@ -353,7 +352,6 @@ img {
   border-radius: 50%;
   text-decoration: none;
   color: var(--icons-color);
-  fill: currentColor;
 }
 
 .social-link:hover,
@@ -362,6 +360,9 @@ img {
   background-color: var(--accent-text-color);
 }
 
+.social-link .icon {
+  fill: currentColor;
+}
 /* Clients */
 .clients {
   padding-top: 94px;
