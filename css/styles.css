@@ -601,6 +601,7 @@ img {
 /*#endregion Modal */
 
 /*#region Portfolio navigation */
+
 .gallery {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -622,6 +623,10 @@ img {
   color: var(--title-text-color);
   background-color: var(--bgr-accent-color);
   cursor: pointer;
+
+  transition: box-shadow var(--animation-duration) var(--timing-function),
+    background-color var(--animation-duration) var(--timing-function),
+    color var(--animation-duration) var(--timing-function);
 }
 
 .filter .filter-item:not(:last-child) {
@@ -661,6 +666,8 @@ img {
 
 .card-link {
   display: block;
+
+  transition: box-shadow var(--animation-duration) var(--timing-function);
 }
 
 .card-link:hover {
