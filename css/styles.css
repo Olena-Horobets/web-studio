@@ -9,6 +9,7 @@
   --bgr-dark-color: #2f303a;
   --icons-color: #afb1b8;
 
+  --btn-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   --space-btw-elements: 30px;
   --animation-duration: 250ms;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -210,7 +211,7 @@ img {
 }
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
   min-width: 200px;
   padding: 10px 32px;
   border: none;
@@ -218,10 +219,11 @@ img {
 
   color: var(--white-color);
   background-color: var(--accent-text-color);
+  box-shadow: var(--btn-shadow);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  text-align: center;
+  align-items: center;
   letter-spacing: 0.06em;
   cursor: pointer;
 
@@ -521,6 +523,38 @@ img {
 .footer .social-link:focus {
   color: var(--white-color);
   background-color: var(--accent-text-color);
+}
+
+/* Send e-mail */
+
+.footer .email-field {
+  margin-left: auto;
+}
+
+.footer-input {
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  margin-right: 12px;
+
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+  box-shadow: var(--btn-shadow);
+}
+
+.footer .btn::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  background-size: contain;
+  background-image: url(../images/icon-send.svg);
+  background-repeat: no-repeat;
 }
 /*#endregion Footer */
 
