@@ -547,6 +547,9 @@ img {
   box-shadow: var(--btn-shadow);
 }
 
+.footer-input::placeholder {
+  color: var(--transparent-white-color);
+}
 .footer .btn::after {
   content: "";
   display: inline-block;
@@ -633,7 +636,8 @@ img {
   color: var(--accent-text-color);
 }
 
-/* Modal Form */
+/*#region Modal Form */
+
 .modal-form {
   display: inline-flex;
   flex-direction: column;
@@ -655,18 +659,6 @@ img {
 .form-field.comment {
   margin-bottom: 20px;
 }
-.form-field:focus-within .input-icon {
-  color: var(--accent-text-color);
-}
-
-.form-field:focus-within .input,
-.form-field:focus-visible .input {
-  border: 1px solid var(--accent-text-color);
-}
-.form-field:focus > .input,
-.form-field:active > .input {
-  border: 1px solid var(--accent-text-color);
-}
 
 .input {
   width: 448px;
@@ -674,6 +666,14 @@ img {
   padding: 12px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+}
+
+.form-field:focus-within .input {
+  border: 1px solid var(--accent-text-color);
+}
+.form-field:focus > .input,
+.form-field:active > .input {
+  border: 1px solid var(--accent-text-color);
 }
 
 .form-label {
@@ -702,21 +702,21 @@ img {
   color: var(--accent-text-color);
 }
 
+.form-field:focus-within .input-icon {
+  color: var(--accent-text-color);
+}
+
 .input.comment {
   height: 120px;
   padding: 12px 16px;
   resize: none;
 }
 
-::placeholder {
+.comment::placeholder {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
-}
-
-.policy {
-  margin-bottom: 30px;
 }
 
 .comment-label {
@@ -729,13 +729,43 @@ img {
 }
 
 .agreement {
+  display: flex;
+  align-items: center;
   font-size: 14px;
   line-height: 1.71;
+  margin-bottom: 30px;
 }
 
+.check-policy {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.check-icon {
+  border-radius: 2px;
+  margin-right: 8px;
+  border: 2px solid var(--title-text-color);
+  background: none;
+
+  transition: background var(--animation-duration) var(--timing-function),
+    border var(--animation-duration) var(--timing-function);
+}
+
+.check-policy:checked + .check-icon {
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-color: var(--accent-text-color);
+  border: 2 px solid var(--accent-text-color);
+}
 .agreement a {
   color: var(--accent-text-color);
+  margin-left: 4px;
 }
+/*#endregion Modal Form */
+
 /*#endregion Modal */
 
 /*#region Portfolio navigation */
