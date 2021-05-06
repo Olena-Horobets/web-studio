@@ -74,6 +74,15 @@ img {
   width: 1px;
   overflow: hidden;
 }
+
+.subtitle {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.17;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 /*#endregion Utilities */
 
 /*#region Header */
@@ -256,11 +265,7 @@ img {
 }
 
 .features .subtitle {
-  margin-bottom: 10px;
   color: var(--title-text-color);
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
 }
 
 .features .text {
@@ -345,9 +350,6 @@ img {
 .work-thumb .subtitle {
   margin-bottom: 0px;
   color: var(--white-color);
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
 }
 
 /* Team */
@@ -506,10 +508,6 @@ img {
 .footer .subtitle {
   margin-bottom: 20px;
   color: var(--white-color);
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-  font-weight: 700;
 }
 
 .social-list > .item:not(:last-child) {
@@ -528,16 +526,11 @@ img {
 }
 
 /* Send e-mail */
-
 .footer .email-field {
   margin-left: auto;
   display: flex;
   align-items: flex-end;
   width: 570px;
-}
-
-.email-field .subtitle {
-  display: block;
 }
 
 .footer-input {
@@ -674,14 +667,17 @@ img {
   padding: 12px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  transition: border var(--animation-duration) var(--timing-function);
 }
 
 .form-field:focus-within .input {
   border: 1px solid var(--accent-text-color);
-}
-.form-field:focus > .input,
-.form-field:active > .input {
-  border: 1px solid var(--accent-text-color);
+  outline: none;
 }
 
 .form-label {
@@ -721,9 +717,6 @@ img {
 }
 
 .comment::placeholder {
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
@@ -742,12 +735,6 @@ img {
   font-size: 14px;
   line-height: 1.71;
   margin-bottom: 30px;
-}
-
-.check-policy {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
 
 .check-icon {
@@ -827,7 +814,6 @@ img {
 /*#endregion Portfolio navigation */
 
 /*#region Portfolio cards */
-
 .gallery-card {
   flex-basis: calc((100% - 2 * var(--space-btw-elements)) / 3);
   margin-bottom: var(--space-btw-elements);
