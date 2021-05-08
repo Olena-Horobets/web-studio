@@ -638,7 +638,7 @@ img {
   color: var(--accent-text-color);
 }
 
-/*#region Modal Form */
+/* Modal Form */
 
 .modal-form {
   display: inline-flex;
@@ -759,7 +759,6 @@ img {
   color: var(--accent-text-color);
   margin-left: 4px;
 }
-/*#endregion Modal Form */
 
 /*#endregion Modal */
 
