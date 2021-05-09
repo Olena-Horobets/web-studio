@@ -1,0 +1,82 @@
+.page-header {
+  border-bottom: 1px solid rgba(236, 236, 236, 1);
+}
+
+.page-header__container,
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list,
+.auth-list {
+  @extend %list;
+  display: flex;
+}
+
+.nav-list__item:not(:last-child),
+.auth-list__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav-list__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @extend %link;
+  color: $title-text-color;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  transition: color $animation-duration $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-text-color;
+  }
+}
+
+.nav-list__link.current {
+  position: relative;
+  color: $accent-text-color;
+
+  &::after {
+    position: absolute;
+    bottom: -1px;
+
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $accent-text-color;
+  }
+}
+
+.auth-list {
+  margin-left: auto;
+}
+
+.auth-list__link {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @extend %link;
+  color: $main-text-color;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  transition: color $animation-duration $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-text-color;
+  }
+}
+
+.auth-list__icon {
+  fill: currentColor;
+}
