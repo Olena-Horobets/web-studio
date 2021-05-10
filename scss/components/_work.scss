@@ -1,5 +1,5 @@
 .work {
-  padding-bottom: 94px;
+  @include section-padding(0);
 }
 
 .work__title {

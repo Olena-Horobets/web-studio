@@ -1,19 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Web Studio</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
+  <body>
     <!-- Header -->
     <header class="page-header">
       <div class="container page-header__container">
@@ -665,7 +673,9 @@
           </svg>
         </button>
         <form action="#" class="modal-form">
-          <h2 class="modal-form__title">Оставьте свои данные, мы вам перезвоним</h2>
+          <h2 class="modal-form__title">
+            Оставьте свои данные, мы вам перезвоним
+          </h2>
           <div class="modal-form__field">
             <label for="name" class="modal-form__label">
               <span class="modal-form__name">Имя</span>
@@ -673,7 +683,12 @@
                 <use href="./images/symbol-defs.svg#icon-input-person"></use>
               </svg>
             </label>
-            <input type="text" id="name" class="modal-form__input" autocomplete="off" />
+            <input
+              type="text"
+              id="name"
+              class="modal-form__input"
+              autocomplete="off"
+            />
           </div>
 
           <div class="modal-form__field">
@@ -683,7 +698,12 @@
                 <use href="./images/symbol-defs.svg#icon-input-phone"></use>
               </svg>
             </label>
-            <input type="tel" id="telephone" class="modal-form__input" autocomplete="off" />
+            <input
+              type="tel"
+              id="telephone"
+              class="modal-form__input"
+              autocomplete="off"
+            />
           </div>
 
           <div class="modal-form__field">
@@ -693,11 +713,18 @@
                 <use href="./images/symbol-defs.svg#icon-input-email"></use>
               </svg>
             </label>
-            <input type="email" id="email" class="modal-form__input" autocomplete="off" />
+            <input
+              type="email"
+              id="email"
+              class="modal-form__input"
+              autocomplete="off"
+            />
           </div>
 
           <div class="modal-form__field modal-form__field--comment">
-            <label for="comment" class="modal-form__label--comment">Комментарий</label>
+            <label for="comment" class="modal-form__label--comment"
+              >Комментарий</label
+            >
             <textarea
               name="comment"
               id="comment"

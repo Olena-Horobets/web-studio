@@ -1,10 +1,11 @@
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  @include section-padding();
 }
+
 .clients__title {
   @extend %title;
 }
+
 .clients__list {
   @extend %list;
   @extend %grid-list;
