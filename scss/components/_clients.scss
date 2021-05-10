@@ -1,0 +1,30 @@
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.clients__title {
+  @extend %title;
+}
+.clients__list {
+  @extend %list;
+  @extend %grid-list;
+}
+
+.clients__link {
+  width: 170px;
+  height: 92px;
+  padding: 16px 32px;
+  @extend %grid-list;
+
+  border-radius: 4px;
+  color: $icons-color;
+  border: 1px solid currentColor;
+  fill: currentColor;
+
+  transition: color $animation-duration $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-text-color;
+  }
+}

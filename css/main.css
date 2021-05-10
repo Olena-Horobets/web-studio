@@ -84,7 +84,7 @@ img {
 }
 
 .nav-list,
-.auth-list, .features__list, .work__list, .team__list, .social {
+.auth-list, .features__list, .work__list, .team__list, .social, .clients__list {
   list-style: none;
   padding-left: 0;
   margin: 0;
@@ -95,7 +95,7 @@ img {
   color: inherit;
 }
 
-.work__title, .team__title {
+.work__title, .team__title, .clients__title {
   margin-bottom: 50px;
   color: #212121;
   font-size: 36px;
@@ -112,7 +112,7 @@ img {
   text-transform: uppercase;
 }
 
-.features__list, .work__list, .team__list, .social {
+.features__list, .work__list, .team__list, .social, .clients__list, .clients__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -649,13 +649,33 @@ summary {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social__link:hover,
-.social__link:focus {
+.social__link:hover, .social__link:focus {
   color: #ffffff;
   background-color: #2196f3;
 }
 
 .social__icon {
   fill: currentColor;
+}
+
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients__link {
+  width: 170px;
+  height: 92px;
+  padding: 16px 32px;
+  border-radius: 4px;
+  color: #afb1b8;
+  border: 1px solid currentColor;
+  fill: currentColor;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clients__link:hover, .clients__link:focus {
+  color: #2196f3;
 }
 /*# sourceMappingURL=main.css.map */

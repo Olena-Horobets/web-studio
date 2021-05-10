@@ -16,12 +16,12 @@
 
   transition: background-color $animation-duration $timing-function,
     color $animation-duration $timing-function;
-}
 
-.social__link:hover,
-.social__link:focus {
-  color: $white-color;
-  background-color: $accent-text-color;
+  &:hover,
+  &:focus {
+    color: $white-color;
+    background-color: $accent-text-color;
+  }
 }
 
 .social__icon {
