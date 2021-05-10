@@ -49,8 +49,14 @@
 
 .modal-form__label {
   position: absolute;
-  bottom: 11px;
-  @include flex-wrapper($direction: column);
+  bottom: 0;
+  left: 0;
+  height: 58px;
+  @include flex-wrapper(
+    $flex: inline-flex,
+    $al-items: flex-start,
+    $direction: column
+  );
 }
 
 .modal-form__label--comment {
@@ -61,12 +67,16 @@
 }
 
 .modal-form__name {
-  margin-bottom: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
   @extend %form-label;
 }
 
 .modal-form__icon {
-  margin-left: 12px;
+  position: absolute;
+  left: 12px;
+  bottom: 11px;
   fill: currentColor;
   color: $title-text-color;
 
