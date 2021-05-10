@@ -4,22 +4,21 @@
 
 .page-header__container,
 .main-nav {
-  display: flex;
-  align-items: center;
+  @include flex-wrapper();
 }
 
-.nav-list,
+.main-nav__list,
 .auth-list {
+  @include flex-wrapper();
   @extend %list;
-  display: flex;
 }
 
-.nav-list__item:not(:last-child),
+.main-nav__item:not(:last-child),
 .auth-list__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.nav-list__link {
+.main-nav__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -37,7 +36,7 @@
   }
 }
 
-.nav-list__link.current {
+.main-nav__link.current {
   position: relative;
   color: $accent-text-color;
 
@@ -59,8 +58,7 @@
 }
 
 .auth-list__link {
-  display: flex;
-  align-items: center;
+  @include flex-wrapper();
   padding-top: 32px;
   padding-bottom: 32px;
 

@@ -1,6 +1,6 @@
 .social {
   @extend %list;
-  @extend %grid-list;
+  @include flex-wrapper();
 }
 
 .social__item:not(:last-child) {
@@ -10,9 +10,7 @@
 .social__link {
   width: 44px;
   height: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-wrapper();
 
   border-radius: 50%;
   text-decoration: none;

@@ -93,14 +93,14 @@ img {
   margin-left: 10px;
 }
 
-.nav-list,
+.main-nav__list,
 .auth-list, .features__list, .work__list, .team__list, .social, .clients__list {
   list-style: none;
   padding-left: 0;
   margin: 0;
 }
 
-.nav-list__link, .auth-list__link, .logo, .contacts__link {
+.main-nav__link, .auth-list__link, .logo, .contacts__link {
   text-decoration: none;
   color: inherit;
 }
@@ -123,7 +123,7 @@ img {
   text-transform: uppercase;
 }
 
-.features__list, .work__list, .team__list, .social, .clients__list {
+.features__list, .work__list, .team__list, .clients__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -416,24 +416,41 @@ summary {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.nav-list,
+.main-nav__list,
 .auth-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.nav-list__item:not(:last-child),
+.main-nav__item:not(:last-child),
 .auth-list__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.nav-list__link {
+.main-nav__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -444,16 +461,16 @@ summary {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-list__link:hover, .nav-list__link:focus {
+.main-nav__link:hover, .main-nav__link:focus {
   color: #2196f3;
 }
 
-.nav-list__link.current {
+.main-nav__link.current {
   position: relative;
   color: #2196f3;
 }
 
-.nav-list__link.current::after {
+.main-nav__link.current::after {
   position: absolute;
   bottom: -1px;
   content: "";
@@ -472,9 +489,16 @@ summary {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   padding-top: 32px;
   padding-bottom: 32px;
   color: #757575;
@@ -609,6 +633,10 @@ summary {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 100%;
   height: 70px;
   background-color: rgba(47, 48, 58, 0.8);
@@ -654,6 +682,22 @@ summary {
   margin-bottom: 16px;
 }
 
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 .social__item:not(:last-child) {
   margin-right: 10px;
 }
@@ -670,6 +714,10 @@ summary {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   border-radius: 50%;
   text-decoration: none;
   color: #afb1b8;
@@ -916,13 +964,16 @@ summary {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .modal-form__title {
@@ -987,6 +1038,12 @@ summary {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;

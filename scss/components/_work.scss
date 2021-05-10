@@ -22,9 +22,7 @@
 .work__thumb-label {
   position: absolute;
   bottom: 0;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-wrapper($flex: inline-flex);
   width: 100%;
   height: 70px;
 

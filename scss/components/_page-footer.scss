@@ -5,8 +5,6 @@
 }
 
 .page-footer-container {
-  //   display: flex;
-  //   align-items: baseline;
   @include flex-wrapper($al-items: baseline);
 }
 
@@ -47,7 +45,7 @@
 
 .email-field {
   margin-left: auto;
-  @include flex-wrapper($align-items: flex-end);
+  @include flex-wrapper($al-items: flex-end);
   width: 570px;
 }
 
