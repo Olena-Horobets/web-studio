@@ -3,6 +3,10 @@
   @extend %grid-list;
 }
 
+.social__item:not(:last-child) {
+  margin-right: 10px;
+}
+
 .social__link {
   width: 44px;
   height: 44px;
@@ -16,6 +20,17 @@
 
   transition: background-color $animation-duration $timing-function,
     color $animation-duration $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $white-color;
+    background-color: $accent-text-color;
+  }
+}
+
+.social__link--inverse {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: $white-color;
 
   &:hover,
   &:focus {

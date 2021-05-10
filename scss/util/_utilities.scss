@@ -75,6 +75,16 @@ img {
   }
 }
 
+.btn__icon {
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
+}
+
+.btn__icon--append {
+  margin-left: 10px;
+}
+
 %list {
   list-style: none;
   padding-left: 0;
