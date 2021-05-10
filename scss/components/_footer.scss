@@ -5,8 +5,9 @@
 }
 
 .page-footer-container {
-  display: flex;
-  align-items: baseline;
+  //   display: flex;
+  //   align-items: baseline;
+  @include flex-wrapper($al-items: baseline);
 }
 
 .contacts {
@@ -46,8 +47,7 @@
 
 .email-field {
   margin-left: auto;
-  display: flex;
-  align-items: flex-end;
+  @include flex-wrapper($align-items: flex-end);
   width: 570px;
 }
 

@@ -14,7 +14,7 @@
   width: 170px;
   height: 92px;
   padding: 16px 32px;
-  @extend %grid-list;
+  @include flex-wrapper();
 
   border-radius: 4px;
   color: $icons-color;

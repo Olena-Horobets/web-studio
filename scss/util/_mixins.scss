@@ -1,0 +1,17 @@
+@mixin flex-wrapper(
+  $flex: flex,
+  $just-content: center,
+  $al-items: center,
+  $direction: row
+) {
+  display: $flex;
+  justify-content: $just-content;
+  align-items: $al-items;
+  flex-direction: $direction;
+}
+
+@mixin grid-item_width($items-amount) {
+  flex-basis: calc(
+    (100% - (#{$items-amount} - 1) * #{$space-btw-elements}) / #{$items-amount}
+  );
+}

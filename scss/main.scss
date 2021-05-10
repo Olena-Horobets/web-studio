@@ -1,5 +1,7 @@
 @import "./util/vars";
 @import "./util/utilities";
+@import "./util/placeholders";
+@import "./util/mixins";
 @import "./base/normalize";
 @import "./components/_page-header";
 @import "./components/logo";
@@ -10,5 +12,6 @@
 @import "./components/social-links";
 @import "./components/clients";
 @import "./components/footer";
-@import "./components/modal";
+@import "./components/modal-window";
+@import "./components/modal-form";
 @import "./components/gallery";

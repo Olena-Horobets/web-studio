@@ -1,0 +1,112 @@
+.modal-form {
+  @include flex-wrapper($flex: inline-flex, $direction: column);
+}
+
+.modal-form__title {
+  font-size: 20px;
+  line-height: 1.15;
+  margin-bottom: 30px;
+  color: $title-text-color;
+}
+
+.modal-form__field {
+  position: relative;
+  margin-bottom: 28px;
+
+  &--comment {
+    margin-bottom: 20px;
+  }
+}
+
+.modal-form__input {
+  width: 448px;
+  height: 40px;
+  padding: 12px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  transition: border $animation-duration $timing-function;
+
+  .modal-form__field:focus-within & {
+    border: 1px solid $accent-text-color;
+    outline: none;
+  }
+}
+
+.modal-form__input--comment {
+  height: 120px;
+  padding: 12px 16px;
+  resize: none;
+
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.modal-form__label {
+  position: absolute;
+  bottom: 11px;
+  @include flex-wrapper($direction: column);
+}
+
+.modal-form__label--comment {
+  position: absolute;
+  top: -4px;
+  transform: translateY(-100%);
+  @extend %form-label;
+}
+
+.modal-form__name {
+  margin-bottom: 15px;
+  @extend %form-label;
+}
+
+.modal-form__icon {
+  margin-left: 12px;
+  fill: currentColor;
+  color: $title-text-color;
+
+  transition: color $animation-duration $timing-function;
+
+  &:hover {
+    color: $accent-text-color;
+  }
+
+  .modal-form__field:focus-within & {
+    color: $accent-text-color;
+  }
+}
+
+.modal-form__agreement {
+  @include flex-wrapper();
+  line-height: 1.71;
+  margin-bottom: 30px;
+}
+
+.modal-form__check-icon {
+  border-radius: 2px;
+  margin-right: 8px;
+  border: 2px solid $title-text-color;
+  background: none;
+
+  transition: background $animation-duration $timing-function,
+    border $animation-duration $timing-function;
+
+  .modal-form__check-policy:checked + & {
+    background-image: url(../images/icon-check.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-color: $accent-text-color;
+    border: 2px solid $accent-text-color;
+  }
+}
+
+.modal-form__link {
+  color: $accent-text-color;
+  margin-left: 4px;
+}

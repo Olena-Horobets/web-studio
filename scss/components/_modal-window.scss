@@ -1,0 +1,70 @@
+.backdrop {
+  position: fixed;
+  visibility: visible;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transition: visibility 5000ms $timing-function,
+    transform $animation-duration $timing-function,
+    opacity $animation-duration $timing-function;
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 0;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  min-width: 528px;
+  min-height: 581px;
+  padding: 40px;
+  border-radius: 4px;
+  background-color: $white-color;
+  box-shadow: $card-shadow;
+
+  transition: transform $animation-duration $timing-function,
+    opacity $animation-duration $timing-function;
+}
+
+.modal__btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: $white-color;
+  color: #000000;
+  cursor: pointer;
+
+  transition: color $animation-duration $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-text-color;
+  }
+}
+
+.modal__icon {
+  fill: currentColor;
+}
