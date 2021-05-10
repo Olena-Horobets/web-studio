@@ -5,9 +5,7 @@
 
 .features__list {
   @extend %list;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  @extend %grid-list;
 }
 
 .features__item {

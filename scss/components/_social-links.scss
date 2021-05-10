@@ -1,0 +1,29 @@
+.social {
+  @extend %list;
+  @extend %grid-list;
+}
+
+.social__link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  text-decoration: none;
+  color: $icons-color;
+
+  transition: background-color $animation-duration $timing-function,
+    color $animation-duration $timing-function;
+}
+
+.social__link:hover,
+.social__link:focus {
+  color: $white-color;
+  background-color: $accent-text-color;
+}
+
+.social__icon {
+  fill: currentColor;
+}
