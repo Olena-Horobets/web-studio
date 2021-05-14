@@ -1,0 +1,40 @@
+%list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+%link {
+  text-decoration: none;
+  color: inherit;
+}
+
+%title {
+  margin-bottom: 50px;
+
+  color: $title-text-color;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+%subtitle {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.17;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+%grid-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+%form-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
