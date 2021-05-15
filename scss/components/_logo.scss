@@ -1,7 +1,6 @@
 .logo {
   display: inline-block;
   @extend %link;
-  margin-right: 90px;
 
   font-family: "Raleway", sans-serif;
   color: $logo-color;
@@ -15,6 +14,13 @@
 }
 
 .logo--inverse {
-  margin-bottom: 20px;
   color: $white-color;
+}
+
+.page-header .logo {
+  margin-right: 90px;
+}
+
+.page-footer .logo {
+  margin-bottom: 20px;
 }
