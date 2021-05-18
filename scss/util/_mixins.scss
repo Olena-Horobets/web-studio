@@ -20,3 +20,22 @@
     (100% - (#{$items-amount} - 1) * #{$space-btw-elements}) / #{$items-amount}
   );
 }
+
+// Media Queries
+@mixin respond-above($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin respond-below($breakpoint) {
+  @media screen and (max-width: $breakpoint - 1) {
+    @content;
+  }
+}
+
+@mixin respond-between($breakpoint-lower, $breakpoint-upper) {
+  @media screen and (min-width: $breakpoint-lower) and (max-width: $breakpoint-upper - 1) {
+    @content;
+  }
+}
