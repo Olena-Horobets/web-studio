@@ -1,26 +1,26 @@
-.features {
-  @include section-padding();
-}
+// .features {
+//   @include section-padding();
+// }
 
-.features__list {
-  @extend %list;
-  @extend %grid-list;
-}
+// .features__list {
+//   @extend %list;
+//   @extend %grid-list;
+// }
 
-.features__item {
-  @include grid-item_width(4);
+// .features__item {
+//   @include grid-item_width(4);
 
-  &::before {
-    content: "";
-    display: block;
-    height: 120px;
-    background-color: $bgr-accent-color;
-    border-radius: 4px;
-    margin-bottom: $space-btw-elements;
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+//   &::before {
+//     content: "";
+//     display: block;
+//     height: 120px;
+//     background-color: $bgr-accent-color;
+//     border-radius: 4px;
+//     margin-bottom: $space-btw-elements;
+//     background-size: auto;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//   }
 
   &:nth-child(1)::before {
     background-image: url(../images/features/antenna.svg);
