@@ -331,7 +331,7 @@ img {
 
 .features__list, .work__list, .team__list, .clients__list, .portfolio {
   display: flex;
-  justify-content: space-between;
+  margin: calc(0px - (30px / 2));
   flex-wrap: wrap;
 }
 
@@ -536,12 +536,32 @@ img {
 }
 
 .features {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .features {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .features__item {
-  flex-basis: calc( (100% - (4 - 1) * 30px) / 4);
+  flex-basis: 100%;
+  margin: calc(30px / 2);
+}
+
+@media screen and (min-width: 768px) {
+  .features__item {
+    flex-basis: calc( (100% - 2 * 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features__item {
+    flex-basis: calc( (100% - 4 * 30px) / 4);
+  }
 }
 
 .features__item::before {
@@ -587,7 +607,7 @@ img {
 }
 
 .work__item {
-  flex-basis: calc( (100% - (3 - 1) * 30px) / 3);
+  flex-basis: calc( (100% - 3 * 30px) / 3);
 }
 
 .work__thumb {
@@ -618,7 +638,7 @@ img {
 }
 
 .card {
-  flex-basis: calc( (100% - (4 - 1) * 30px) / 4);
+  flex-basis: calc( (100% - 4 * 30px) / 4);
   background-color: #ffffff;
   border-radius: 4px;
   text-align: center;
@@ -1009,7 +1029,7 @@ img {
 }
 
 .product {
-  flex-basis: calc( (100% - (3 - 1) * 30px) / 3);
+  flex-basis: calc( (100% - 3 * 30px) / 3);
 }
 
 .product__thumb {
