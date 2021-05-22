@@ -3,23 +3,24 @@
 @import "./util/vars";
 @import "./util/breakpoints";
 @import "./util/common";
-@import "./util/placeholders";
+@import "./util/media-queries";
 @import "./util/mixins";
+@import "./util/placeholders";
 @import "./util/utilities";
 
 @import "./components/page-header";
 @import "./components/logo";
-@import "./components/section-hero";
 @import "./components/buttons";
-@import "./components/section-work";
-@import "./components/section-team";
 @import "./components/social-links";
-@import "./components/section-clients";
 @import "./components/page-footer";
 @import "./components/modal-window";
 @import "./components/modal-form";
-@import "./components/portfolio";
 @import "./components/portfolio-card";
 
 @import "./layouts/container";
+@import "./layouts/section-hero";
 @import "./layouts/section-features";
+@import "./layouts/section-work";
+@import "./layouts/section-team";
+@import "./layouts/section-clients";
+@import "./layouts/portfolio";

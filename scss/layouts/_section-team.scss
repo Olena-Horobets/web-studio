@@ -1,6 +1,10 @@
 .team {
-  @include section-padding();
+  @include section-padding(60px, 60px);
   background-color: $bgr-accent-color;
+
+  @include respond-above($desktop) {
+    @include section-padding();
+  }
 }
 
 .team__title {
@@ -13,12 +17,22 @@
 }
 
 .card {
-  @include grid-item_width(4);
+  width: 100%;
+  margin: calc(#{$space-btw-elements} / 2);
+
   background-color: $white-color;
   border-radius: 4px;
   text-align: center;
   border-radius: 0 0 4px 4px;
   box-shadow: $card-shadow;
+
+  @include respond-above($tablet) {
+    @include grid-item_width(2);
+  }
+
+  @include respond-above($desktop) {
+    @include grid-item_width(4);
+  }
 }
 
 .card__label {
