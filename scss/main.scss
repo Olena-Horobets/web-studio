@@ -8,7 +8,8 @@
 @import "./util/placeholders";
 @import "./util/utilities";
 
-@import "./components/page-header";
+@import "./components/main-nav";
+@import "./components/authorization-nav";
 @import "./components/logo";
 @import "./components/buttons";
 @import "./components/team-card";
@@ -19,6 +20,7 @@
 @import "./components/portfolio-card";
 
 @import "./layouts/container";
+@import "./layouts/page-header";
 @import "./layouts/section-hero";
 @import "./layouts/section-features";
 @import "./layouts/section-work";

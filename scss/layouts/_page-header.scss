@@ -1,0 +1,7 @@
+.page-header {
+  border-bottom: 1px solid rgba(236, 236, 236, 1);
+}
+
+.page-header__container {
+  @include flex-wrapper($just-content: space-between);
+}

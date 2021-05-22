@@ -4,9 +4,14 @@
 
   font-family: "Raleway", sans-serif;
   color: $logo-color;
-  font-size: 26px;
-  line-height: 1.2;
+  font-size: 24px;
+  line-height: 1.16;
   font-weight: 700;
+
+  @include respond-above($desktop) {
+    font-size: 26px;
+    line-height: 1.2;
+  }
 }
 
 .logo-accent {
@@ -18,7 +23,13 @@
 }
 
 .page-header .logo {
-  margin-right: 90px;
+  margin-right: 88px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+
+  @include respond-above($desktop) {
+    margin-right: 93px;
+  }
 }
 
 .page-footer .logo {
