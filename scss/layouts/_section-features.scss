@@ -19,7 +19,7 @@
     @include grid-item_width(2);
   }
 
-  @include respond-above($desctop) {
+  @include respond-above($desktop) {
     @include grid-item_width(4);
   }
 

@@ -1,5 +1,9 @@
 .work {
   @include section-padding(0);
+
+  @include respond-below($desktop) {
+    display: none;
+  }
 }
 
 .work__title {
@@ -13,6 +17,7 @@
 
 .work__item {
   @include grid-item_width(3);
+  margin: calc(#{$space-btw-elements} / 2);
 }
 
 .work__thumb {
