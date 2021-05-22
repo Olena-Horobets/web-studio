@@ -55,6 +55,10 @@
 .features__subtitle {
   @extend %subtitle;
   color: $title-text-color;
+
+  @include respond-below($tablet) {
+    text-align: center;
+  }
 }
 
 .features__text {
