@@ -1,0 +1,25 @@
+.page-footer {
+  @include section-padding(60px, 60px);
+  background-color: $bgr-dark-color;
+}
+
+.page-footer-container {
+  @include respond-above($tablet) {
+    @include flex-wrapper($direction: column);
+  }
+
+  @include respond-above($desktop) {
+    @include flex-wrapper($al-items: baseline, $just-content: space-between);
+  }
+}
+
+.flex-wrapper {
+  @include respond-between($tablet, $desktop) {
+    width: 100%;
+    @include flex-wrapper($just-content: space-between, $al-items: baseline);
+  }
+
+  @include respond-above($desktop) {
+    @include flex-wrapper($al-items: baseline);
+  }
+}

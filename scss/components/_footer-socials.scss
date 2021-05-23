@@ -1,0 +1,15 @@
+.social-media {
+  @include respond-below($desktop) {
+    margin-bottom: 60px;
+  }
+}
+
+.social-media__subtitle {
+  @extend %subtitle;
+  margin-bottom: 20px;
+  color: $white-color;
+
+  @include respond-below($desktop) {
+    text-align: center;
+  }
+}
