@@ -48,14 +48,11 @@
   }
 
   @include respond-above($tablet) {
-    // @include grid-item_width(2);
-    // flex-basis: calc(100% - 60px) / 2;
-    width: 354px;
+    @include grid-item_width(2);
   }
 
   @include respond-above($desktop) {
-    // @include grid-item_width(3);
-    width: 370px;
+    @include grid-item_width(3);
   }
 }
 

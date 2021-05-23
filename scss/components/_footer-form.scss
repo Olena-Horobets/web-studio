@@ -19,15 +19,11 @@
   }
 }
 
-.email-field__label {
-  @include respond-below($mobile) {
-    max-width: 450px;
-  }
-}
-
 .email-field__input {
+  width: 100%;
   height: 50px;
   padding: 15px 16px;
+  margin-bottom: 20px;
 
   font-size: 16px;
   line-height: 1.25;
@@ -41,17 +37,9 @@
     color: $transparent-white-color;
   }
 
-  @include respond-below($mobile) {
-    flex-basis: 100%;
-  }
-
-  @include respond-below($desktop) {
-    width: 450px;
-    margin-bottom: 20px;
-  }
-
   @include respond-above($desktop) {
     width: 358px;
+    margin-bottom: 0;
     margin-right: 12px;
   }
 }
