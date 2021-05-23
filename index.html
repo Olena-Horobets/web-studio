@@ -35,6 +35,104 @@
               <a href="#footer" class="main-nav__link">Контакты</a>
             </li>
           </ul>
+
+          <!-- Mobile menu modal -->
+          <div class="mobile-menu">
+            <button
+              type="button"
+              class="mobile-menu__btn"
+              aria-expanded="false"
+              aria-controls="menu-container"
+              data-menu-button
+            >
+              <svg
+                class="mobile-menu__icon"
+                width="40"
+                height="40"
+                aria-label="Переключатель мобильного меню"
+              >
+                <use
+                  class="mobile-menu__icon-menu"
+                  href="./images/symbol-defs.svg#icon-menu-burger"
+                ></use>
+                <use
+                  class="mobile-menu__icon-cross"
+                  href="./images/symbol-defs.svg#close-cross"
+                ></use>
+              </svg>
+            </button>
+
+            <div class="mobile-menu__container" id="menu-container" data-menu>
+              <ul class="mobile-nav">
+                <li class="mobile-nav__item">
+                  <a href="./index.html" class="mobile-nav__link">Студия</a>
+                </li>
+                <li class="mobile-nav__item">
+                  <a href="./portfolio.html" class="mobile-nav__link"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="mobile-nav__item">
+                  <a href="#footer" class="mobile-nav__link">Контакты</a>
+                </li>
+              </ul>
+
+              <ul class="mobile-auth">
+                <li class="mobile-auth__item">
+                  <a
+                    href="tel:+380961111111"
+                    class="mobile-auth__link mobile-auth__link--tel"
+                  >
+                    +38 096 111 11 11
+                  </a>
+                </li>
+                <li class="mobile-auth__item">
+                  <a href="mailto:info@example.com" class="mobile-auth__link">
+                    info@devstudio.com
+                  </a>
+                </li>
+              </ul>
+
+              <ul class="mobile-socials">
+                <li class="mobile-socials__item">
+                  <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="nofollow noreferrer"
+                    class="mobile-socials__link"
+                    >Instagram</a
+                  >
+                </li>
+                <li class="mobile-socials__item">
+                  <a
+                    href="https://twitter.com/"
+                    target="_blank"
+                    rel="nofollow noreferrer"
+                    class="mobile-socials__link"
+                    >Twitter</a
+                  >
+                </li>
+                <li class="mobile-socials__item">
+                  <a
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    rel="nofollow noreferrer"
+                    class="mobile-socials__link"
+                    >Facebook</a
+                  >
+                </li>
+                <li class="mobile-socials__item">
+                  <a
+                    href="https://www.linkedin.com/"
+                    target="_blank"
+                    rel="nofollow noreferrer"
+                    class="mobile-socials__link"
+                    >LinkedIn</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
         </nav>
 
         <!-- Authorization links -->
@@ -64,47 +162,6 @@
         </ul>
       </div>
     </header>
-    <!-- <header class="header">
-      <div class="container">
-        <nav class="nav">
-          <a href="#" class="logo">Logo</a>
-          <button
-            type="button"
-            class="btn"
-            aria-expanded="false"
-            aria-controls="menu-container"
-            data-menu-button
-          >
-            <svg
-              width="40"
-              height="40"
-              aria-label="Переключатель мобильного меню"
-            >
-              <use
-                class="icon-menu"
-                href="./images/symbol-defs.svg#icon-menu-burger"
-              ></use>
-              <use
-                class="icon-cross"
-                href="./images/symbol-defs.svg#icon-menu-cross"
-              ></use>
-            </svg>
-          </button>
-
-          <div class="menu-container" id="menu-container" data-menu>
-            <ul>
-              <li>Студия</li>
-              <li>Портфолио</li>
-              <li>Контакты</li>
-            </ul>
-            <ul>
-              <li>+38 096 111 11 11</li>
-              <li>info@devstudio.com</li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </header> -->
 
     <!-- Основной контент -->
     <main>

@@ -3,5 +3,6 @@
 }
 
 .page-header__container {
+  position: relative;
   @include flex-wrapper($just-content: space-between);
 }

@@ -1,0 +1,125 @@
+// Button styles
+.mobile-menu__btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  z-index: 3;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  color: $title-text-color;
+
+  transform: color $animation-duration $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-text-color;
+  }
+
+  @include respond-above($tablet) {
+    display: none;
+  }
+}
+
+.mobile-menu__icon {
+  fill: currentColor;
+}
+
+.mobile-menu__icon-cross {
+  display: none;
+
+  .mobile-menu__btn.is-open & {
+    display: block;
+  }
+}
+
+.mobile-menu__btn.is-open .mobile-menu__icon-menu {
+  display: none;
+}
+
+// Container styles
+.mobile-menu__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 48px 40px;
+
+  display: none;
+  background-color: #fff;
+
+  &.is-open {
+    display: block;
+  }
+
+  @include respond-above($tablet) {
+    display: none;
+  }
+}
+
+// Navigation stiles
+.mobile-nav {
+  @extend %list;
+  margin-bottom: 302px;
+}
+
+.mobile-nav__item:not(:last-child),
+.mobile-auth__item:not(:last-child) {
+  padding-bottom: 32px;
+}
+
+.mobile-nav__link {
+  @extend %link;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: $title-text-color;
+
+  transform: color $animation-duration $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-text-color;
+  }
+}
+
+.mobile-auth {
+  @extend %list;
+  margin-bottom: 64px;
+}
+
+.mobile-auth__link {
+  @extend %link;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+
+  &--tel {
+    font-size: 34px;
+    color: $accent-text-color;
+  }
+}
+
+.mobile-socials {
+  @extend %list;
+  @include flex-wrapper();
+  margin-left: -40px;
+}
+
+.mobile-socials__item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mobile-socials__link {
+  @extend %link;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  color: $accent-text-color;
+}
