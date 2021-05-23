@@ -9,6 +9,10 @@
   color: $title-text-color;
   text-align: center;
 
+  @include respond-below(370px) {
+    font-size: 18px;
+  }
+
   @include respond-above($desktop) {
     line-height: 1.15;
   }

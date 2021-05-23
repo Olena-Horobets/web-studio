@@ -5,6 +5,8 @@
   left: 0;
   width: 100vw;
   height: 100vh;
+  z-index: 3;
+  overflow-y: scroll;
   background-color: rgba(0, 0, 0, 0.2);
 
   transition: visibility 5000ms $timing-function,
@@ -30,7 +32,8 @@
   width: 100%;
   max-width: 450px;
   min-height: 610px;
-  overflow-y: auto;
+  z-index: 4;
+  overflow-y: scroll;
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
   padding: 40px;
@@ -40,6 +43,10 @@
 
   transition: transform $animation-duration $timing-function,
     opacity $animation-duration $timing-function;
+
+  @include respond-below(370px) {
+    padding: 50px 30px;
+  }
 
   @include respond-above($desktop) {
     position: absolute;
