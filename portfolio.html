@@ -26,17 +26,113 @@
           >
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a href="./index.html" class="main-nav__link">Студия</a>
+              <a href="./index.html" class="main-nav__link current">Студия</a>
             </li>
             <li class="main-nav__item">
-              <a href="./portfolio.html" class="main-nav__link current"
-                >Портфолио</a
-              >
+              <a href="./portfolio.html" class="main-nav__link">Портфолио</a>
             </li>
             <li class="main-nav__item">
               <a href="#footer" class="main-nav__link">Контакты</a>
             </li>
           </ul>
+
+          <!-- Mobile menu modal -->
+          <div class="mobile-menu">
+            <button
+              type="button"
+              class="mobile-menu__btn"
+              aria-expanded="false"
+              aria-controls="menu-container"
+              data-menu-button
+            >
+              <svg
+                class="mobile-menu__icon"
+                width="40"
+                height="40"
+                aria-label="Переключатель мобильного меню"
+              >
+                <use
+                  class="mobile-menu__icon-menu"
+                  href="./images/symbol-defs.svg#icon-menu-burger"
+                ></use>
+                <use
+                  class="mobile-menu__icon-cross"
+                  href="./images/symbol-defs.svg#close-cross"
+                ></use>
+              </svg>
+            </button>
+
+            <div class="mobile-menu__container" id="menu-container" data-menu>
+              <ul class="mobile-nav">
+                <li class="mobile-nav__item">
+                  <a href="./index.html" class="mobile-nav__link">Студия</a>
+                </li>
+                <li class="mobile-nav__item">
+                  <a href="./portfolio.html" class="mobile-nav__link"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="mobile-nav__item">
+                  <a href="#footer" class="mobile-nav__link">Контакты</a>
+                </li>
+              </ul>
+
+              <ul class="mobile-auth">
+                <li class="mobile-auth__item">
+                  <a
+                    href="tel:+380961111111"
+                    class="mobile-auth__link mobile-auth__link--tel"
+                  >
+                    +38 096 111 11 11
+                  </a>
+                </li>
+                <li class="mobile-auth__item">
+                  <a href="mailto:info@example.com" class="mobile-auth__link">
+                    info@devstudio.com
+                  </a>
+                </li>
+              </ul>
+
+              <ul class="mobile-socials">
+                <li class="mobile-socials__item">
+                  <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="nofollow noreferrer"
+                    class="mobile-socials__link"
+                    >Instagram</a
+                  >
+                </li>
+                <li class="mobile-socials__item">
+                  <a
+                    href="https://twitter.com/"
+                    target="_blank"
+                    rel="nofollow noreferrer"
+                    class="mobile-socials__link"
+                    >Twitter</a
+                  >
+                </li>
+                <li class="mobile-socials__item">
+                  <a
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    rel="nofollow noreferrer"
+                    class="mobile-socials__link"
+                    >Facebook</a
+                  >
+                </li>
+                <li class="mobile-socials__item">
+                  <a
+                    href="https://www.linkedin.com/"
+                    target="_blank"
+                    rel="nofollow noreferrer"
+                    class="mobile-socials__link"
+                    >LinkedIn</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
         </nav>
 
         <!-- Authorization links -->
@@ -44,9 +140,7 @@
           <li class="auth-list__item">
             <a href="mailto:info@example.com" class="auth-list__link">
               <svg
-                class="auth-list__icon"
-                width="16"
-                height="12"
+                class="auth-list__icon icon-envelope"
                 style="margin-right: 10px"
               >
                 <use href="./images/symbol-defs.svg#icon-envelope"></use>
@@ -57,9 +151,7 @@
           <li class="auth-list__item">
             <a href="tel:+380961111111" class="auth-list__link">
               <svg
-                class="auth-list__icon"
-                width="10"
-                height="16"
+                class="auth-list__icon icon-smartphone"
                 style="margin-right: 10px"
               >
                 <use href="./images/symbol-defs.svg#icon-smartphone"></use>
@@ -76,23 +168,27 @@
       <section class="gallery">
         <div class="container">
           <h1 class="visually-hidden">Галерея работ</h1>
-          <ul class="filter">
-            <li class="filter__item">
-              <button type="button" class="btn btn--filter">Все</button>
-            </li>
-            <li class="filter__item">
-              <button type="button" class="btn btn--filter">Веб-сайты</button>
-            </li>
-            <li class="filter__item">
-              <button type="button" class="btn btn--filter">Приложения</button>
-            </li>
-            <li class="filter__item">
-              <button type="button" class="btn btn--filter">Дизайн</button>
-            </li>
-            <li class="filter__item">
-              <button type="button" class="btn btn--filter">Маркетинг</button>
-            </li>
-          </ul>
+          <div class="filter">
+            <ul class="filter__list">
+              <li class="filter__item">
+                <button type="button" class="btn btn--filter">Все</button>
+              </li>
+              <li class="filter__item">
+                <button type="button" class="btn btn--filter">Веб-сайты</button>
+              </li>
+              <li class="filter__item">
+                <button type="button" class="btn btn--filter">
+                  Приложения
+                </button>
+              </li>
+              <li class="filter__item">
+                <button type="button" class="btn btn--filter">Дизайн</button>
+              </li>
+              <li class="filter__item">
+                <button type="button" class="btn btn--filter">Маркетинг</button>
+              </li>
+            </ul>
+          </div>
 
           <!-- Portfolio Cards -->
           <ul class="portfolio">
@@ -242,12 +338,37 @@
               <a href="#" class="portfolio__link">
                 <article class="product">
                   <div class="product__thumb">
-                    <img
-                      src="./images/gallery/site-product.jpg"
-                      width="370"
-                      height="294"
-                      alt="site-product"
-                    />
+                    <picture class="product__picture">
+                      <source
+                        srcset="
+                          ./images/gallery/desktop/product2_desktop@1x.jpg 1x,
+                          ./images/gallery/desktop/product2_desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="
+                          ./images/gallery/tablet/product2_tablet@1x.jpg 1x,
+                          ./images/gallery/tablet/product2_tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="
+                          ./images/gallery/mobile/product2_mobile@1x.jpg 1x,
+                          ./images/gallery/mobile/product2_mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/jpg"
+                      />
+                      <img
+                        src="./images/gallery/site-product.jpg"
+                        alt="site-product"
+                      />
+                    </picture>
+
                     <div class="product__overlay">
                       <p class="">
                         Технокряк это современная площадка распространения
@@ -357,84 +478,86 @@
     <!-- Footer -->
     <footer id="footer" class="page-footer">
       <div class="container page-footer-container">
-        <div class="contacts">
-          <a class="logo logo--inverse" href="./index.html" lang="en">
-            <span class="logo-accent">Web</span>Studio
-          </a>
-          <address class="contacts__address">
-            г. Киев, пр-т Леси Украинки, 26
-          </address>
-          <address class="contacts__address">
-            <a class="contacts__link" href="mailto:info@example.com">
-              info@example.com
+        <div class="flex-wrapper">
+          <div class="contacts">
+            <a class="logo logo--inverse" href="./index.html" lang="en">
+              <span class="logo-accent">Web</span>Studio
             </a>
-          </address>
-          <address class="contacts__address">
-            <a class="contacts__link" href="tel:+380961111111">
-              +38 096 111 11 11
-            </a>
-          </address>
-        </div>
-
-        <div class="social-media">
-          <span class="social-media__subtitle">присоединяйтесь</span>
-          <ul class="social">
-            <li class="social__item">
-              <a
-                class="social__link social__link--inverse"
-                href="https://www.instagram.com/"
-                target="_blank"
-                rel="nofollow noreferrer"
-              >
-                <svg class="social__icon" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-instagram"></use>
-                </svg>
+            <address class="contacts__address">
+              г. Киев, пр-т Леси Украинки, 26
+            </address>
+            <address class="contacts__address">
+              <a class="contacts__link" href="mailto:info@example.com">
+                info@example.com
               </a>
-            </li>
-
-            <li class="social__item">
-              <a
-                class="social__link social__link--inverse"
-                href="https://www.twitter.com/"
-                target="_blank"
-                rel="nofollow noreferrer"
-              >
-                <svg class="social__icon" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-twitter"></use>
-                </svg>
+            </address>
+            <address class="contacts__address">
+              <a class="contacts__link" href="tel:+380961111111">
+                +38 096 111 11 11
               </a>
-            </li>
+            </address>
+          </div>
 
-            <li class="social__item">
-              <a
-                class="social__link social__link--inverse"
-                href="https://www.facebook.com/"
-                target="_blank"
-                rel="nofollow noreferrer"
-              >
-                <svg class="social__icon" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
+          <div class="social-media">
+            <span class="social-media__subtitle">присоединяйтесь</span>
+            <ul class="social">
+              <li class="social__item">
+                <a
+                  class="social__link social__link--inverse"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="nofollow noreferrer"
+                >
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
 
-            <li class="item">
-              <a
-                class="social__link social__link--inverse"
-                href="https://www.linkedin.com/"
-                target="_blank"
-                rel="nofollow noreferrer"
-              >
-                <svg class="social__icon" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+              <li class="social__item">
+                <a
+                  class="social__link social__link--inverse"
+                  href="https://www.twitter.com/"
+                  target="_blank"
+                  rel="nofollow noreferrer"
+                >
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="social__item">
+                <a
+                  class="social__link social__link--inverse"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="nofollow noreferrer"
+                >
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="item">
+                <a
+                  class="social__link social__link--inverse"
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="nofollow noreferrer"
+                >
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <form action="#" class="email-field">
-          <label for="user_email">
+          <label for="user_email" class="email-field__label">
             <span class="email-field__subtitle">Подпишитесь на рассылку</span>
             <input
               type="email"
@@ -445,7 +568,7 @@
               autocomplete="off"
             />
           </label>
-          <button type="submit" class="btn">
+          <button type="submit" class="btn email-field__btn">
             Подписаться
             <svg class="btn__icon btn__icon--append">
               <use href="./images/symbol-defs.svg#icon-send"></use>
@@ -454,5 +577,7 @@
         </form>
       </div>
     </footer>
+
+    <script src="./js/menu.js"></script>
   </body>
 </html>

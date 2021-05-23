@@ -1,31 +1,61 @@
 .gallery {
-  @include section-padding();
+  @include section-padding(60px, 60px);
+
+  @include respond-above($desktop) {
+    @include section-padding();
+  }
 }
 
 .filter {
-  @include flex-wrapper();
-  @extend %list;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+
+  @include respond-above($tablet) {
+    margin-bottom: 30px;
+  }
+
+  @include respond-above($desktop) {
+    margin-bottom: 50px;
+  }
 }
 
-.filter__item:not(:last-child) {
-  margin-right: 8px;
+.filter__list {
+  @include flex-wrapper($just-content: start);
+  flex-wrap: wrap;
+  @extend %list;
+  margin: -4px;
+
+  @include respond-above($tablet) {
+    @include flex-wrapper();
+  }
+}
+
+.filter__item {
+  margin: 4px;
 }
 
 .portfolio {
   @extend %grid-list;
   @extend %list;
+  margin: -15px;
 }
 
 .portfolio__item {
-  margin-bottom: $space-btw-elements;
+  width: 100%;
+  margin: 15px;
 
-  &:nth-child(3n) {
-    margin-right: 0;
+  @include respond-above($mobile) {
+    max-width: 450px;
   }
 
-  &:nth-last-child(-n + 3) {
-    margin-bottom: 0;
+  @include respond-above($tablet) {
+    // @include grid-item_width(2);
+    // flex-basis: calc(100% - 60px) / 2;
+    width: 354px;
+  }
+
+  @include respond-above($desktop) {
+    // @include grid-item_width(3);
+    width: 370px;
   }
 }
 
