@@ -63,7 +63,12 @@
 // Navigation stiles
 .mobile-nav {
   @extend %list;
-  margin-bottom: 302px;
+  display: block;
+  margin-bottom: 200px;
+
+  @include respond-below(440px) {
+    margin-bottom: 100px;
+  }
 }
 
 .mobile-nav__item:not(:last-child),
@@ -85,10 +90,16 @@
   &:focus {
     color: $accent-text-color;
   }
+
+  @include respond-below(440px) {
+    font-size: 34px;
+  }
 }
 
 .mobile-auth {
   @extend %list;
+  display: block;
+  margin-top: auto;
   margin-bottom: 64px;
 }
 
@@ -102,13 +113,21 @@
   &--tel {
     font-size: 34px;
     color: $accent-text-color;
+
+    @include respond-below(440px) {
+      font-size: 30px;
+    }
+  }
+
+  @include respond-below(440px) {
+    font-size: 20px;
   }
 }
 
 .mobile-socials {
   @extend %list;
-  @include flex-wrapper();
-  margin-left: -40px;
+  @include flex-wrapper($just-content: flex-start);
+  margin-left: -10px;
 }
 
 .mobile-socials__item:not(:last-child) {
@@ -123,4 +142,8 @@
   font-size: 18px;
   line-height: 1.22;
   color: $accent-text-color;
+
+  @include respond-below(440px) {
+    font-size: 12px;
+  }
 }

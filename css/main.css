@@ -274,7 +274,6 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  outline: 1px solid red;
 }
 
 body {
@@ -602,7 +601,14 @@ img {
 }
 
 .mobile-nav {
-  margin-bottom: 302px;
+  display: block;
+  margin-bottom: 200px;
+}
+
+@media screen and (max-width: 439px) {
+  .mobile-nav {
+    margin-bottom: 100px;
+  }
 }
 
 .mobile-nav__item:not(:last-child),
@@ -623,7 +629,15 @@ img {
   color: #2196f3;
 }
 
+@media screen and (max-width: 439px) {
+  .mobile-nav__link {
+    font-size: 34px;
+  }
+}
+
 .mobile-auth {
+  display: block;
+  margin-top: auto;
   margin-bottom: 64px;
 }
 
@@ -639,12 +653,24 @@ img {
   color: #2196f3;
 }
 
+@media screen and (max-width: 439px) {
+  .mobile-auth__link--tel {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 439px) {
+  .mobile-auth__link {
+    font-size: 20px;
+  }
+}
+
 .mobile-socials {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  margin-left: -40px;
+  margin-left: -10px;
 }
 
 .mobile-socials__item:not(:last-child) {
@@ -658,6 +684,12 @@ img {
   font-size: 18px;
   line-height: 1.22;
   color: #2196f3;
+}
+
+@media screen and (max-width: 439px) {
+  .mobile-socials__link {
+    font-size: 12px;
+  }
 }
 
 .btn {
