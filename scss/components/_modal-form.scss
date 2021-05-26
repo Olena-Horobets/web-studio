@@ -110,7 +110,7 @@
 }
 
 .modal-form__agreement {
-  @include flex-wrapper();
+  @include flex-wrapper($al-items: flex-start);
   font-size: 12px;
   line-height: 1.17;
   margin-bottom: 30px;
@@ -121,10 +121,17 @@
 }
 
 .modal-form__check-icon {
+  width: 14px;
+  height: 14px;
   border-radius: 2px;
   margin-right: 8px;
   border: 2px solid $title-text-color;
   background: none;
+
+  @include respond-above(400px) {
+    width: 16px;
+    height: 16px;
+  }
 
   transition: background $animation-duration $timing-function,
     border $animation-duration $timing-function;
@@ -141,6 +148,11 @@
   .modal-form__check-policy:focus + & {
     outline: 2px solid $accent-text-color;
   }
+}
+
+.modal-form__confirmation {
+  @include flex-wrapper($al-items: flex-start, $just-content: flex-start);
+  flex-wrap: wrap;
 }
 
 .modal-form__link {

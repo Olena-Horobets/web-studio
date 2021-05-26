@@ -17,8 +17,12 @@
 }
 
 .card__label {
-  //   padding: 30px auto 24px;
-  padding: 30px 32px;
+  padding-top: 30px;
+  padding-bottom: 24px;
+
+  @include respond-above($desktop) {
+    padding-bottom: 30px;
+  }
 }
 
 .card__subtitle {
