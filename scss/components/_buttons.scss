@@ -49,6 +49,11 @@
     background-color $animation-duration $timing-function,
     color $animation-duration $timing-function;
 
+  @include respond-below(390px) {
+    font-size: 14px;
+    padding: 5px 20px;
+  }
+
   &:hover,
   &:focus,
   &:active {
