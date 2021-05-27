@@ -16,7 +16,7 @@
 .flex-wrapper {
   @include respond-between($tablet, $desktop) {
     width: 100%;
-    @include flex-wrapper($just-content: space-between, $al-items: baseline);
+    @include flex-wrapper($just-content: space-around, $al-items: baseline);
   }
 
   @include respond-above($desktop) {

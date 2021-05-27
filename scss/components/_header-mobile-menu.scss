@@ -1,6 +1,7 @@
 // Button styles
 .mobile-menu__btn {
   position: absolute;
+  display: flex;
   top: 10px;
   right: 15px;
   z-index: 2;
@@ -41,6 +42,7 @@
 // Container styles
 .mobile-menu__container {
   position: fixed;
+  @include flex-wrapper($direction: column, $al-items: flex-start);
   top: 0;
   left: 0;
   bottom: 0;
@@ -48,11 +50,15 @@
   z-index: 1;
   padding: 48px 40px;
 
-  display: none;
+  transform: scale(0);
   background-color: #fff;
 
   &.is-open {
-    display: block;
+    transform: scale(1);
+  }
+
+  @include respond-below(360px) {
+    padding: 28px 20px;
   }
 
   @include respond-above($tablet) {
@@ -64,11 +70,6 @@
 .mobile-nav {
   @extend %list;
   display: block;
-  margin-bottom: 200px;
-
-  @include respond-below(440px) {
-    margin-bottom: 150px;
-  }
 }
 
 .mobile-nav__item:not(:last-child),
