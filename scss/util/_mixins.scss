@@ -17,6 +17,10 @@
 
 @mixin grid-item_width($items-amount) {
   flex-basis: calc(
+<<<<<<< HEAD
     (100% - (#{$items-amount} - 1) * #{$space-btw-elements}) / #{$items-amount}
+=======
+    (100% - #{$items-amount} * #{$space-btw-elements}) / #{$items-amount}
+>>>>>>> goit-markup-hw-08/main
   );
 }

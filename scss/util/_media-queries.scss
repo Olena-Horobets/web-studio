@@ -1,0 +1,26 @@
+@mixin respond-above($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin respond-below($breakpoint) {
+  @media screen and (max-width: $breakpoint - 1) {
+    @content;
+  }
+}
+
+@mixin respond-between($breakpoint-lower, $breakpoint-upper) {
+  @media screen and (min-width: $breakpoint-lower) and (max-width: $breakpoint-upper - 1) {
+    @content;
+  }
+}
+
+@mixin retina-display($dpr) {
+  @media screen and (min-device-pixel-ratio: $dpr),
+      screen and (-webkit-min-device-pixel-ratio: $dpr),
+      screen and (min-resolution: calc(96dpi * #{$dpr}) ),
+      screen and (min-resolution: calc(1dppx * #{$dpr}) ) {
+    @content;
+  }
+}

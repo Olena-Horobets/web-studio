@@ -1,0 +1,70 @@
+.auth-list {
+  @include flex-wrapper($direction: column, $al-items: end);
+  @extend %list;
+  margin-left: auto;
+
+  @include respond-below($tablet) {
+    display: none;
+  }
+
+  @include respond-above($desktop) {
+    @include flex-wrapper();
+  }
+}
+
+.auth-list__item:not(:last-child) {
+  margin-bottom: 10px;
+
+  @include respond-above($desktop) {
+    margin-right: 50px;
+    margin-bottom: 0px;
+  }
+}
+
+.auth-list__link {
+  @include respond-below($desktop) {
+    font-size: 12px;
+    line-height: 1.16;
+    padding: 0;
+  }
+
+  @include flex-wrapper();
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @extend %link;
+  color: $main-text-color;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  transition: color $animation-duration $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-text-color;
+  }
+}
+
+.auth-list__icon {
+  fill: currentColor;
+}
+
+.icon-envelope {
+  width: 14px;
+  height: 10px;
+
+  @include respond-above($desktop) {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+.icon-smartphone {
+  width: 10px;
+  height: 14px;
+
+  @include respond-above($desktop) {
+    width: 10px;
+    height: 16px;
+  }
+}

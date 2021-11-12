@@ -1,0 +1,30 @@
+.team {
+  @include section-padding(60px, 60px);
+  background-color: $bgr-accent-color;
+
+  @include respond-above($desktop) {
+    @include section-padding();
+  }
+}
+
+.team__title {
+  @extend %title;
+}
+
+.team__list {
+  @extend %list;
+  @extend %grid-list;
+}
+
+.team__item {
+  flex-basis: 100%;
+  margin: calc(#{$space-btw-elements} / 2);
+
+  @include respond-above($tablet) {
+    @include grid-item_width(2);
+  }
+
+  @include respond-above($desktop) {
+    @include grid-item_width(4);
+  }
+}

@@ -1,0 +1,40 @@
+.card {
+  width: 100%;
+
+  background-color: $white-color;
+  border-radius: 4px;
+  text-align: center;
+  border-radius: 0 0 4px 4px;
+  box-shadow: $card-shadow;
+
+  @include respond-above($tablet) {
+    @include grid-item_width(2);
+  }
+
+  @include respond-above($desktop) {
+    @include grid-item_width(4);
+  }
+}
+
+.card__label {
+  padding-top: 30px;
+  padding-bottom: 24px;
+
+  @include respond-above($desktop) {
+    padding-bottom: 30px;
+  }
+}
+
+.card__subtitle {
+  color: $title-text-color;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.card__text {
+  font-size: 16px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}

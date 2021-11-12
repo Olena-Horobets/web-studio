@@ -37,6 +37,104 @@
               <a href="#footer" class="main-nav__link">Контакты</a>
             </li>
           </ul>
+
+          <!-- Mobile menu modal -->
+          <div class="mobile-menu">
+            <button
+              type="button"
+              class="mobile-menu__btn"
+              aria-expanded="false"
+              aria-controls="menu-container"
+              data-menu-button
+            >
+              <svg
+                class="mobile-menu__icon"
+                width="40"
+                height="40"
+                aria-label="Переключатель мобильного меню"
+              >
+                <use
+                  class="mobile-menu__icon-menu"
+                  href="./images/symbol-defs.svg#icon-menu-burger"
+                ></use>
+                <use
+                  class="mobile-menu__icon-cross"
+                  href="./images/symbol-defs.svg#icon-cross"
+                ></use>
+              </svg>
+            </button>
+
+            <div class="mobile-menu__container" id="menu-container" data-menu>
+              <ul class="mobile-nav">
+                <li class="mobile-nav__item">
+                  <a href="./index.html" class="mobile-nav__link">Студия</a>
+                </li>
+                <li class="mobile-nav__item">
+                  <a href="./portfolio.html" class="mobile-nav__link"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="mobile-nav__item">
+                  <a href="#footer" class="mobile-nav__link">Контакты</a>
+                </li>
+              </ul>
+
+              <ul class="mobile-auth">
+                <li class="mobile-auth__item">
+                  <a
+                    href="tel:+380961111111"
+                    class="mobile-auth__link mobile-auth__link--tel"
+                  >
+                    +38 096 111 11 11
+                  </a>
+                </li>
+                <li class="mobile-auth__item">
+                  <a href="mailto:info@example.com" class="mobile-auth__link">
+                    info@devstudio.com
+                  </a>
+                </li>
+              </ul>
+
+              <ul class="mobile-socials">
+                <li class="mobile-socials__item">
+                  <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="nofollow noreferrer"
+                    class="mobile-socials__link"
+                    >Instagram</a
+                  >
+                </li>
+                <li class="mobile-socials__item">
+                  <a
+                    href="https://twitter.com/"
+                    target="_blank"
+                    rel="nofollow noreferrer"
+                    class="mobile-socials__link"
+                    >Twitter</a
+                  >
+                </li>
+                <li class="mobile-socials__item">
+                  <a
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    rel="nofollow noreferrer"
+                    class="mobile-socials__link"
+                    >Facebook</a
+                  >
+                </li>
+                <li class="mobile-socials__item">
+                  <a
+                    href="https://www.linkedin.com/"
+                    target="_blank"
+                    rel="nofollow noreferrer"
+                    class="mobile-socials__link"
+                    >LinkedIn</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
         </nav>
 
         <!-- Authorization links -->
@@ -44,9 +142,7 @@
           <li class="auth-list__item">
             <a href="mailto:info@example.com" class="auth-list__link">
               <svg
-                class="auth-list__icon"
-                width="16"
-                height="12"
+                class="auth-list__icon icon-envelope"
                 style="margin-right: 10px"
               >
                 <use href="./images/symbol-defs.svg#icon-envelope"></use>
@@ -57,9 +153,7 @@
           <li class="auth-list__item">
             <a href="tel:+380961111111" class="auth-list__link">
               <svg
-                class="auth-list__icon"
-                width="10"
-                height="16"
+                class="auth-list__icon icon-smartphone"
                 style="margin-right: 10px"
               >
                 <use href="./images/symbol-defs.svg#icon-smartphone"></use>
@@ -72,27 +166,31 @@
     </header>
 
     <main>
-      <!-- Page navigation -->
       <section class="gallery">
         <div class="container">
+          <!-- Page navigation -->
           <h1 class="visually-hidden">Галерея работ</h1>
-          <ul class="filter">
-            <li class="filter__item">
-              <button type="button" class="btn btn--filter">Все</button>
-            </li>
-            <li class="filter__item">
-              <button type="button" class="btn btn--filter">Веб-сайты</button>
-            </li>
-            <li class="filter__item">
-              <button type="button" class="btn btn--filter">Приложения</button>
-            </li>
-            <li class="filter__item">
-              <button type="button" class="btn btn--filter">Дизайн</button>
-            </li>
-            <li class="filter__item">
-              <button type="button" class="btn btn--filter">Маркетинг</button>
-            </li>
-          </ul>
+          <div class="filter">
+            <ul class="filter__list">
+              <li class="filter__item">
+                <button type="button" class="btn btn--filter">Все</button>
+              </li>
+              <li class="filter__item">
+                <button type="button" class="btn btn--filter">Веб-сайты</button>
+              </li>
+              <li class="filter__item">
+                <button type="button" class="btn btn--filter">
+                  Приложения
+                </button>
+              </li>
+              <li class="filter__item">
+                <button type="button" class="btn btn--filter">Дизайн</button>
+              </li>
+              <li class="filter__item">
+                <button type="button" class="btn btn--filter">Маркетинг</button>
+              </li>
+            </ul>
+          </div>
 
           <!-- Portfolio Cards -->
           <ul class="portfolio">
@@ -100,12 +198,37 @@
               <a href="#" class="portfolio__link">
                 <article class="product">
                   <div class="product__thumb">
-                    <img
-                      src="./images/gallery/web-application.jpg"
-                      width="370"
-                      height="294"
-                      alt="web-application"
-                    />
+                    <picture class="product__picture">
+                      <source
+                        srcset="
+                          ./images/gallery/desktop/product1_desktop@1x.jpg 1x,
+                          ./images/gallery/desktop/product1_desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="
+                          ./images/gallery/tablet/product1_tablet@1x.jpg 1x,
+                          ./images/gallery/tablet/product1_tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="
+                          ./images/gallery/mobile/product1_mobile@1x.jpg 1x,
+                          ./images/gallery/mobile/product1_mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/jpg"
+                      />
+                      <img
+                        src="./images/gallery/desktop/product1_desktop@1x.jpg"
+                        alt="web-application"
+                      />
+                    </picture>
+
                     <div class="product__overlay">
                       <p class="">
                         Технокряк это современная площадка распространения
@@ -128,12 +251,37 @@
               <a href="#" class="portfolio__link">
                 <article class="product">
                   <div class="product__thumb">
-                    <img
-                      src="./images/gallery/sports-poster.jpg"
-                      width="370"
-                      height="294"
-                      alt="sports-poster"
-                    />
+                    <picture class="product__picture">
+                      <source
+                        srcset="
+                          ./images/gallery/desktop/product2_desktop@1x.jpg 1x,
+                          ./images/gallery/desktop/product2_desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="
+                          ./images/gallery/tablet/product2_tablet@1x.jpg 1x,
+                          ./images/gallery/tablet/product2_tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="
+                          ./images/gallery/mobile/product2_mobile@1x.jpg 1x,
+                          ./images/gallery/mobile/product2_mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/jpg"
+                      />
+                      <img
+                        src="./images/gallery/desktop/product2_desktop@1x.jpg"
+                        alt="sports-poster"
+                      />
+                    </picture>
+
                     <div class="product__overlay">
                       <p class="">
                         Технокряк это современная площадка распространения
@@ -158,12 +306,37 @@
               <a href="#" class="portfolio__link">
                 <article class="product">
                   <div class="product__thumb">
-                    <img
-                      src="./images/gallery/restourant-seafood.jpg"
-                      width="370"
-                      height="294"
-                      alt="restourant-seafood"
-                    />
+                    <picture class="product__picture">
+                      <source
+                        srcset="
+                          ./images/gallery/desktop/product3_desktop@1x.jpg 1x,
+                          ./images/gallery/desktop/product3_desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="
+                          ./images/gallery/tablet/product3_tablet@1x.jpg 1x,
+                          ./images/gallery/tablet/product3_tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="
+                          ./images/gallery/mobile/product3_mobile@1x.jpg 1x,
+                          ./images/gallery/mobile/product3_mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/jpg"
+                      />
+                      <img
+                        src="./images/gallery/desktop/product3_desktop@1x.jpg"
+                        alt="restourant-seafood"
+                      />
+                    </picture>
+
                     <div class="product__overlay">
                       <p class="">
                         Технокряк это современная площадка распространения
@@ -186,12 +359,37 @@
               <a href="#" class="portfolio__link">
                 <article class="product">
                   <div class="product__thumb">
-                    <img
-                      src="./images/gallery/musical-headphones.jpg"
-                      width="370"
-                      height="294"
-                      alt="musical-headphones"
-                    />
+                    <picture class="product__picture">
+                      <source
+                        srcset="
+                          ./images/gallery/desktop/product4_desktop@1x.jpg 1x,
+                          ./images/gallery/desktop/product4_desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="
+                          ./images/gallery/tablet/product4_tablet@1x.jpg 1x,
+                          ./images/gallery/tablet/product4_tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="
+                          ./images/gallery/mobile/product4_mobile@1x.jpg 1x,
+                          ./images/gallery/mobile/product4_mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/jpg"
+                      />
+                      <img
+                        src="./images/gallery/desktop/product4_desktop@1x.jpg"
+                        alt="musical-headphones"
+                      />
+                    </picture>
+
                     <div class="product__overlay">
                       <p class="">
                         Технокряк это современная площадка распространения
@@ -214,12 +412,37 @@
               <a href="#" class="portfolio__link">
                 <article class="product">
                   <div class="product__thumb">
-                    <img
-                      src="./images/gallery/custom-package.jpg"
-                      width="370"
-                      height="294"
-                      alt="custom-package"
-                    />
+                    <picture class="product__picture">
+                      <source
+                        srcset="
+                          ./images/gallery/desktop/product5_desktop@1x.jpg 1x,
+                          ./images/gallery/desktop/product5_desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="
+                          ./images/gallery/tablet/product5_tablet@1x.jpg 1x,
+                          ./images/gallery/tablet/product5_tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="
+                          ./images/gallery/mobile/product5_mobile@1x.jpg 1x,
+                          ./images/gallery/mobile/product5_mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/jpg"
+                      />
+                      <img
+                        src="./images/gallery/desktop/product5_desktop@1x.jpg"
+                        alt="custom-package"
+                      />
+                    </picture>
+
                     <div class="product__overlay">
                       <p class="">
                         Технокряк это современная площадка распространения
@@ -242,12 +465,37 @@
               <a href="#" class="portfolio__link">
                 <article class="product">
                   <div class="product__thumb">
-                    <img
-                      src="./images/gallery/site-product.jpg"
-                      width="370"
-                      height="294"
-                      alt="site-product"
-                    />
+                    <picture class="product__picture">
+                      <source
+                        srcset="
+                          ./images/gallery/desktop/product6_desktop@1x.jpg 1x,
+                          ./images/gallery/desktop/product6_desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="
+                          ./images/gallery/tablet/product6_tablet@1x.jpg 1x,
+                          ./images/gallery/tablet/product6_tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="
+                          ./images/gallery/mobile/product6_mobile@1x.jpg 1x,
+                          ./images/gallery/mobile/product6_mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/jpg"
+                      />
+                      <img
+                        src="./images/gallery/desktop/product6_desktop@1x.jpg"
+                        alt="site-product"
+                      />
+                    </picture>
+
                     <div class="product__overlay">
                       <p class="">
                         Технокряк это современная площадка распространения
@@ -270,12 +518,37 @@
               <a href="#" class="portfolio__link">
                 <article class="product">
                   <div class="product__thumb">
-                    <img
-                      src="./images/gallery/magazine-layout.jpg"
-                      width="370"
-                      height="294"
-                      alt="magazine-layout"
-                    />
+                    <picture class="product__picture">
+                      <source
+                        srcset="
+                          ./images/gallery/desktop/product7_desktop@1x.jpg 1x,
+                          ./images/gallery/desktop/product7_desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="
+                          ./images/gallery/tablet/product7_tablet@1x.jpg 1x,
+                          ./images/gallery/tablet/product7_tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="
+                          ./images/gallery/mobile/product7_mobile@1x.jpg 1x,
+                          ./images/gallery/mobile/product7_mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/jpg"
+                      />
+                      <img
+                        src="./images/gallery/desktop/product7_desktop@1x.jpg"
+                        alt="magazine-layout"
+                      />
+                    </picture>
+
                     <div class="product__overlay">
                       <p class="">
                         Технокряк это современная площадка распространения
@@ -298,12 +571,37 @@
               <a href="#" class="portfolio__link">
                 <article class="product">
                   <div class="product__thumb">
-                    <img
-                      src="./images/gallery/branding-company.jpg"
-                      width="370"
-                      height="294"
-                      alt="branding-company"
-                    />
+                    <picture class="product__picture">
+                      <source
+                        srcset="
+                          ./images/gallery/desktop/product2_desktop@1x.jpg 1x,
+                          ./images/gallery/desktop/product2_desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="
+                          ./images/gallery/tablet/product2_tablet@1x.jpg 1x,
+                          ./images/gallery/tablet/product2_tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="
+                          ./images/gallery/mobile/product2_mobile@1x.jpg 1x,
+                          ./images/gallery/mobile/product8_mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/jpg"
+                      />
+                      <img
+                        src="./images/gallery/desktop/product2_desktop@1x.jpg"
+                        alt="branding-company"
+                      />
+                    </picture>
+
                     <div class="product__overlay">
                       <p class="">
                         Технокряк это современная площадка распространения
@@ -326,12 +624,37 @@
               <a href="#" class="portfolio__link">
                 <article class="product">
                   <div class="product__thumb">
-                    <img
-                      src="./images/gallery/innovative-application.jpg"
-                      width="370"
-                      height="294"
-                      alt="innovative-application"
-                    />
+                    <picture class="product__picture">
+                      <source
+                        srcset="
+                          ./images/gallery/desktop/product9_desktop@1x.jpg 1x,
+                          ./images/gallery/desktop/product9_desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="
+                          ./images/gallery/tablet/product9_tablet@1x.jpg 1x,
+                          ./images/gallery/tablet/product9_tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        srcset="
+                          ./images/gallery/mobile/product9_mobile@1x.jpg 1x,
+                          ./images/gallery/mobile/product9_mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/jpg"
+                      />
+                      <img
+                        src="./images/gallery/desktop/product9_desktop@1x.jpg"
+                        alt="innovative-application"
+                      />
+                    </picture>
+
                     <div class="product__overlay">
                       <p class="">
                         Технокряк это современная площадка распространения
@@ -355,218 +678,99 @@
     </main>
 
     <!-- Footer -->
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <footer class="footer">
-<<<<<<< HEAD
-      <a href="./index.html" class="logo link" lang="en"
-        ><span class="logo-accent">Web</span>Studio</a
-      >
-      <address class="address">г. Киев, пр-т Леси Украинки, 26</address>
-      <address>
-        <a href="mailto:info@example.com" class="contacts link"
-          >info@example.com</a
-        >
-      </address>
-      <address>
-        <a href="tel:+380961111111" class="contacts link">+38 096 111 11 11</a>
-      </address>
-=======
-      <div class="container">
-        <a href="./index.html" class="logo link" lang="en"
-          ><span class="logo-accent">Web</span>Studio</a
-        >
-        <address class="address">г. Киев, пр-т Леси Украинки, 26</address>
-        <address>
-          <a href="mailto:info@example.com" class="contacts link"
-            >info@example.com</a
-          >
-        </address>
-        <address>
-          <a href="tel:+380961111111" class="contacts link"
-            >+38 096 111 11 11</a
-          >
-        </address>
-      </div>
->>>>>>> goit-markup-hw-03/main
-=======
-=======
->>>>>>> goit-markup-hw-05/main
-=======
->>>>>>> goit-markup-hw-06/main
-    <footer id="footer" class="footer">
-      <div class="container flex-element">
-        <div class="contacts">
-          <a class="logo link" href="./index.html" lang="en">
-            <span class="logo-accent">Web</span>Studio
-          </a>
-          <address class="address">г. Киев, пр-т Леси Украинки, 26</address>
-          <address>
-            <a class="contact link" href="mailto:info@example.com">
-              info@example.com
-            </a>
-          </address>
-          <address>
-            <a class="contact link" href="tel:+380961111111">
-=======
     <footer id="footer" class="page-footer">
       <div class="container page-footer-container">
-        <div class="contacts">
-          <a class="logo logo--inverse" href="./index.html" lang="en">
-            <span class="logo-accent">Web</span>Studio
-          </a>
-          <address class="contacts__address">
-            г. Киев, пр-т Леси Украинки, 26
-          </address>
-          <address class="contacts__address">
-            <a class="contacts__link" href="mailto:info@example.com">
-              info@example.com
+        <div class="flex-wrapper">
+          <div class="contacts">
+            <a class="logo logo--inverse" href="./index.html" lang="en">
+              <span class="logo-accent">Web</span>Studio
             </a>
-          </address>
-          <address class="contacts__address">
-            <a class="contacts__link" href="tel:+380961111111">
->>>>>>> goit-markup-hw-07/main
-              +38 096 111 11 11
-            </a>
-          </address>
+            <address class="contacts__address">
+              г. Киев, пр-т Леси Украинки, 26
+            </address>
+            <address class="contacts__address">
+              <a class="contacts__link" href="mailto:info@example.com">
+                info@example.com
+              </a>
+            </address>
+            <address class="contacts__address">
+              <a class="contacts__link" href="tel:+380961111111">
+                +38 096 111 11 11
+              </a>
+            </address>
+          </div>
+
+          <div class="social-media">
+            <span class="social-media__subtitle">присоединяйтесь</span>
+            <ul class="social">
+              <li class="social__item">
+                <a
+                  class="social__link social__link--inverse"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="nofollow noreferrer"
+                >
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="social__item">
+                <a
+                  class="social__link social__link--inverse"
+                  href="https://www.twitter.com/"
+                  target="_blank"
+                  rel="nofollow noreferrer"
+                >
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="social__item">
+                <a
+                  class="social__link social__link--inverse"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="nofollow noreferrer"
+                >
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="item">
+                <a
+                  class="social__link social__link--inverse"
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="nofollow noreferrer"
+                >
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div class="social-media">
-<<<<<<< HEAD
-          <p class="subtitle">присоединяйтесь</p>
-          <ul class="list social-list">
-            <li class="item">
-              <a
-                class="social-link"
-=======
-          <span class="social-media__subtitle">присоединяйтесь</span>
-          <ul class="social">
-            <li class="social__item">
-              <a
-                class="social__link social__link--inverse"
->>>>>>> goit-markup-hw-07/main
-                href="https://www.instagram.com/"
-                target="_blank"
-                rel="nofollow noreferrer"
-              >
-<<<<<<< HEAD
-                <svg class="icon" width="20" height="20">
-=======
-                <svg class="social__icon" width="20" height="20">
->>>>>>> goit-markup-hw-07/main
-                  <use href="./images/symbol-defs.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-
-<<<<<<< HEAD
-            <li class="item">
-              <a
-                class="social-link"
-=======
-            <li class="social__item">
-              <a
-                class="social__link social__link--inverse"
->>>>>>> goit-markup-hw-07/main
-                href="https://www.twitter.com/"
-                target="_blank"
-                rel="nofollow noreferrer"
-              >
-<<<<<<< HEAD
-                <svg class="icon" width="20" height="20">
-=======
-                <svg class="social__icon" width="20" height="20">
->>>>>>> goit-markup-hw-07/main
-                  <use href="./images/symbol-defs.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-
-<<<<<<< HEAD
-            <li class="item">
-              <a
-                class="social-link"
-=======
-            <li class="social__item">
-              <a
-                class="social__link social__link--inverse"
->>>>>>> goit-markup-hw-07/main
-                href="https://www.facebook.com/"
-                target="_blank"
-                rel="nofollow noreferrer"
-              >
-<<<<<<< HEAD
-                <svg class="icon" width="20" height="20">
-=======
-                <svg class="social__icon" width="20" height="20">
->>>>>>> goit-markup-hw-07/main
-                  <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="item">
-              <a
-<<<<<<< HEAD
-                class="social-link"
-=======
-                class="social__link social__link--inverse"
->>>>>>> goit-markup-hw-07/main
-                href="https://www.linkedin.com/"
-                target="_blank"
-                rel="nofollow noreferrer"
-              >
-<<<<<<< HEAD
-                <svg class="icon" width="20" height="20">
-=======
-                <svg class="social__icon" width="20" height="20">
->>>>>>> goit-markup-hw-07/main
-                  <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      </div>
-<<<<<<< HEAD
->>>>>>> goit-markup-hw-04/main
-=======
->>>>>>> goit-markup-hw-05/main
-=======
-
         <form action="#" class="email-field">
-          <label for="user_email">
-            <span class="subtitle">Подпишитесь на рассылку</span>
-=======
-
-        <form action="#" class="email-field">
-          <label for="user_email">
+          <label for="user_email" class="email-field__label">
             <span class="email-field__subtitle">Подпишитесь на рассылку</span>
->>>>>>> goit-markup-hw-07/main
             <input
               type="email"
               name="email"
               id="user_email"
               placeholder="E-mail"
-<<<<<<< HEAD
-              class="footer-input"
-              autocomplete="off"
-            />
-          </label>
-          <button type="submit" class="btn">Подписаться</button>
-        </form>
-      </div>
->>>>>>> goit-markup-hw-06/main
-=======
               class="email-field__input"
               autocomplete="off"
             />
           </label>
-          <button type="submit" class="btn">
+          <button type="submit" class="btn email-field__btn">
             Подписаться
             <svg class="btn__icon btn__icon--append">
               <use href="./images/symbol-defs.svg#icon-send"></use>
@@ -574,7 +778,8 @@
           </button>
         </form>
       </div>
->>>>>>> goit-markup-hw-07/main
     </footer>
+
+    <script src="./js/menu.js"></script>
   </body>
 </html>
