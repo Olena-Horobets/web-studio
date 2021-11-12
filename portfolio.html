@@ -26,6 +26,7 @@
     <!-- Header -->
     <header class="header">
       <div class="container main-nav">
+        <!-- Main navigation -->
         <nav class="nav">
           <a href="./index.html" class="logo link" lang="en"
             ><span class="logo-accent">Web</span>Studio</a
@@ -38,18 +39,38 @@
               <a href="./portfolio.html" class="link current">Портфолио</a>
             </li>
             <li class="item">
-              <a href="./contacts.html" class="link">Контакты</a>
+              <a href="#footer" class="link">Контакты</a>
             </li>
           </ul>
         </nav>
+
+        <!-- Authorization links -->
         <ul class="auth list">
           <li class="item">
-            <a href="mailto:info@example.com" class="link"
-              >info@devstudio.com</a
-            >
+            <a href="mailto:info@example.com" class="link">
+              <svg
+                class="auth-icon"
+                width="16"
+                height="12"
+                style="margin-right: 10px"
+              >
+                <use href="./images/symbol-defs.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
           </li>
           <li class="item">
-            <a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
+            <a href="tel:+380961111111" class="link">
+              <svg
+                class="auth-icon"
+                width="10"
+                height="16"
+                style="margin-right: 10px"
+              >
+                <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
           </li>
         </ul>
       </div>
@@ -79,112 +100,138 @@
 
           <ul class="list portfolio">
             <li class="gallery-card">
-              <img
-                src="./images/gallery/web-application.jpg"
-                width="370"
-                height="294"
-                alt="web-application"
-              />
-              <div class="label">
-                <h2 class="title">Технокряк</h2>
-                <p class="text">Веб-сайт</p>
-              </div>
+              <a href="#" class="card-link link">
+                <img
+                  src="./images/gallery/web-application.jpg"
+                  width="370"
+                  height="294"
+                  alt="web-application"
+                />
+                <div class="label">
+                  <h2 class="card-title">Технокряк</h2>
+                  <p class="text">Веб-сайт</p>
+                </div>
+              </a>
             </li>
+
             <li class="gallery-card">
-              <img
-                src="./images/gallery/sports-poster.jpg"
-                width="370"
-                height="294"
-                alt="sports-poster"
-              />
-              <div class="label">
-                <h2 class="title">Постер New Orlean vs Golden Star</h2>
-                <p class="text">Дизайн</p>
-              </div>
+              <a href="#" class="card-link link">
+                <img
+                  src="./images/gallery/sports-poster.jpg"
+                  width="370"
+                  height="294"
+                  alt="sports-poster"
+                />
+                <div class="label">
+                  <h2 class="card-title">Постер New Orlean vs Golden Star</h2>
+                  <p class="text">Дизайн</p>
+                </div>
+              </a>
             </li>
+
             <li class="gallery-card">
-              <img
-                src="./images/gallery/restourant-seafood.jpg"
-                width="370"
-                height="294"
-                alt="restourant-seafood"
-              />
-              <div class="label">
-                <h2 class="title">Ресторан Seafood</h2>
-                <p class="text">Приложение</p>
-              </div>
+              <a href="#" class="card-link link">
+                <img
+                  src="./images/gallery/restourant-seafood.jpg"
+                  width="370"
+                  height="294"
+                  alt="restourant-seafood"
+                />
+                <div class="label">
+                  <h2 class="card-title">Ресторан Seafood</h2>
+                  <p class="text">Приложение</p>
+                </div>
+              </a>
             </li>
+
             <li class="gallery-card">
-              <img
-                src="./images/gallery/musical-headphones.jpg"
-                width="370"
-                height="294"
-                alt="musical-headphones"
-              />
-              <div class="label">
-                <h2 class="title">Проект Prime</h2>
-                <p class="text">Маркетинг</p>
-              </div>
+              <a href="#" class="card-link link">
+                <img
+                  src="./images/gallery/musical-headphones.jpg"
+                  width="370"
+                  height="294"
+                  alt="musical-headphones"
+                />
+                <div class="label">
+                  <h2 class="card-title">Проект Prime</h2>
+                  <p class="text">Маркетинг</p>
+                </div>
+              </a>
             </li>
+
             <li class="gallery-card">
-              <img
-                src="./images/gallery/custom-package.jpg"
-                width="370"
-                height="294"
-                alt="custom-package"
-              />
-              <div class="label">
-                <h2 class="title">Проект Boxes</h2>
-                <p class="text">Приложение</p>
-              </div>
+              <a href="#" class="card-link link">
+                <img
+                  src="./images/gallery/custom-package.jpg"
+                  width="370"
+                  height="294"
+                  alt="custom-package"
+                />
+                <div class="label">
+                  <h2 class="card-title">Проект Boxes</h2>
+                  <p class="text">Приложение</p>
+                </div>
+              </a>
             </li>
+
             <li class="gallery-card">
-              <img
-                src="./images/gallery/site-project.jpg"
-                width="370"
-                height="294"
-                alt="site-project"
-              />
-              <div class="label">
-                <h2 class="title">Inspiration has no Borders</h2>
-                <p class="text">Веб-сайт</p>
-              </div>
+              <a href="#" class="card-link link">
+                <img
+                  src="./images/gallery/site-project.jpg"
+                  width="370"
+                  height="294"
+                  alt="site-project"
+                />
+                <div class="label">
+                  <h2 class="card-title">Inspiration has no Borders</h2>
+                  <p class="text">Веб-сайт</p>
+                </div>
+              </a>
             </li>
+
             <li class="gallery-card">
-              <img
-                src="./images/gallery/magazine-layout.jpg"
-                width="370"
-                height="294"
-                alt="magazine-layout"
-              />
-              <div class="label">
-                <h2 class="title">Издание Limited Edition</h2>
-                <p class="text">Дизайн</p>
-              </div>
+              <a href="#" class="card-link link">
+                <img
+                  src="./images/gallery/magazine-layout.jpg"
+                  width="370"
+                  height="294"
+                  alt="magazine-layout"
+                />
+                <div class="label">
+                  <h2 class="card-title">Издание Limited Edition</h2>
+                  <p class="text">Дизайн</p>
+                </div>
+              </a>
             </li>
+
             <li class="gallery-card">
-              <img
-                src="./images/gallery/branding-company.jpg"
-                width="370"
-                height="294"
-                alt="branding-company"
-              />
-              <div class="label">
-                <h2 class="title">Проект LAB</h2>
-                <p class="text">Маркетинг</p>
-              </div>
+              <a href="#" class="card-link link">
+                <img
+                  src="./images/gallery/branding-company.jpg"
+                  width="370"
+                  height="294"
+                  alt="branding-company"
+                />
+                <div class="label">
+                  <h2 class="card-title">Проект LAB</h2>
+                  <p class="text">Маркетинг</p>
+                </div>
+              </a>
             </li>
+
             <li class="gallery-card">
-              <img
-                src="./images/gallery/innovative-application.jpg"
-                width="370"
-                height="294"
-                alt="innovative-application"
-              />
-              <div class="label">
-                <h2 class="title">Growing Business</h2>
-                <p class="text">Приложение</p>
-              </div>
+              <a href="#" class="card-link link">
+                <img
+                  src="./images/gallery/innovative-application.jpg"
+                  width="370"
+                  height="294"
+                  alt="innovative-application"
+                />
+                <div class="label">
+                  <h2 class="card-title">Growing Business</h2>
+                  <p class="text">Приложение</p>
+                </div>
+              </a>
             </li>
           </ul>
         </div>
@@ -192,6 +239,7 @@
     </main>
 
     <!-- Footer -->
+<<<<<<< HEAD
     <footer class="footer">
 <<<<<<< HEAD
       <a href="./index.html" class="logo link" lang="en"
@@ -224,6 +272,84 @@
         </address>
       </div>
 >>>>>>> goit-markup-hw-03/main
+=======
+    <footer id="footer" class="footer">
+      <div class="container flex-element">
+        <div class="contacts">
+          <a class="logo link" href="./index.html" lang="en">
+            <span class="logo-accent">Web</span>Studio
+          </a>
+          <address class="address">г. Киев, пр-т Леси Украинки, 26</address>
+          <address>
+            <a class="contact link" href="mailto:info@example.com">
+              info@example.com
+            </a>
+          </address>
+          <address>
+            <a class="contact link" href="tel:+380961111111">
+              +38 096 111 11 11
+            </a>
+          </address>
+        </div>
+
+        <div class="social-media">
+          <p class="subtitle">присоединяйтесь</p>
+          <ul class="list social-list">
+            <li class="item">
+              <a
+                class="social-link"
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="nofollow noreferrer"
+              >
+                <svg class="icon" width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="item">
+              <a
+                class="social-link"
+                href="https://www.twitter.com/"
+                target="_blank"
+                rel="nofollow noreferrer"
+              >
+                <svg class="icon" width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="item">
+              <a
+                class="social-link"
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="nofollow noreferrer"
+              >
+                <svg class="icon" width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="item">
+              <a
+                class="social-link"
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="nofollow noreferrer"
+              >
+                <svg class="icon" width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+>>>>>>> goit-markup-hw-04/main
     </footer>
   </body>
 </html>
