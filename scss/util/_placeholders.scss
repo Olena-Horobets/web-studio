@@ -10,10 +10,6 @@
 }
 
 %title {
-<<<<<<< HEAD
-  margin-bottom: 50px;
-
-=======
   @include respond-below($desktop) {
     font-size: 28px;
     line-height: 1.18;
@@ -21,7 +17,6 @@
   }
 
   margin-bottom: 50px;
->>>>>>> goit-markup-hw-08/main
   color: $title-text-color;
   font-size: 36px;
   line-height: 1.17;
@@ -39,12 +34,8 @@
 
 %grid-list {
   display: flex;
-<<<<<<< HEAD
-  justify-content: space-between;
-=======
   margin: calc(0px - (#{$space-btw-elements} / 2));
   // justify-content: space-between;
->>>>>>> goit-markup-hw-08/main
   flex-wrap: wrap;
 }
 

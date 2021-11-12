@@ -15,15 +15,13 @@ body {
   line-height: 1.14;
   font-weight: 400;
   color: $main-text-color;
+  overflow: overlay;
 }
 
-<<<<<<< HEAD
-=======
 body.modal-open {
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
->>>>>>> goit-markup-hw-08/main
 h1,
 h2,
 h3,
