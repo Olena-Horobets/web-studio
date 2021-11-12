@@ -565,7 +565,7 @@
         </div>
 
         <div class="social-media">
-          <p class="subtitle">присоединяйтесь</p>
+          <span class="subtitle">присоединяйтесь</span>
           <ul class="list social-list">
             <li class="item">
               <a
@@ -620,6 +620,21 @@
             </li>
           </ul>
         </div>
+
+        <form action="#" class="email-field">
+          <label for="user_email">
+            <span class="subtitle">Подпишитесь на рассылку</span>
+            <input
+              type="email"
+              name="email"
+              id="user_email"
+              placeholder="E-mail"
+              class="footer-input"
+              autocomplete="off"
+            />
+          </label>
+          <button type="submit" class="btn">Подписаться</button>
+        </form>
       </div>
     </footer>
 
@@ -631,6 +646,64 @@
             <use href="./images/symbol-defs.svg#close-cross"></use>
           </svg>
         </button>
+        <form action="#" class="modal-form">
+          <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
+          <div class="form-field">
+            <label for="name" class="form-label">
+              <span class="label-text">Имя</span>
+              <svg class="input-icon" width="18" height="18">
+                <use href="./images/symbol-defs.svg#icon-input-person"></use>
+              </svg>
+            </label>
+            <input type="text" id="name" class="input" autocomplete="off" />
+          </div>
+
+          <div class="form-field">
+            <label for="telephone" class="form-label">
+              <span class="label-text">Телефон</span>
+              <svg class="input-icon" width="18" height="18">
+                <use href="./images/symbol-defs.svg#icon-input-phone"></use>
+              </svg>
+            </label>
+            <input type="tel" id="telephone" class="input" autocomplete="off" />
+          </div>
+
+          <div class="form-field">
+            <label for="email" class="form-label">
+              <span class="label-text">Почта</span>
+              <svg class="input-icon" width="18" height="18">
+                <use href="./images/symbol-defs.svg#icon-input-email"></use>
+              </svg>
+            </label>
+            <input type="email" id="email" class="input" autocomplete="off" />
+          </div>
+
+          <div class="form-field comment">
+            <label for="comment" class="comment-label">Комментарий</label>
+            <textarea
+              name="comment"
+              id="comment"
+              class="input comment"
+              placeholder="Введите текст"
+            ></textarea>
+          </div>
+
+          <label for="check-policy" class="agreement">
+            <input
+              type="checkbox"
+              name="check-policy"
+              id="check-policy"
+              class="check-policy visually-hidden"
+            />
+            <svg width="16" height="15" class="check-icon">
+              <use></use>
+            </svg>
+            <span>Соглашаюсь с рассылкой и принимаю</span>
+            <a href="#">Условия договора</a>
+          </label>
+
+          <button type="submit" class="btn">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>

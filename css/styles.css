@@ -9,6 +9,7 @@
   --bgr-dark-color: #2f303a;
   --icons-color: #afb1b8;
 
+  --btn-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   --space-btw-elements: 30px;
   --animation-duration: 250ms;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -72,6 +73,15 @@ img {
   height: 1px;
   width: 1px;
   overflow: hidden;
+}
+
+.subtitle {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.17;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 /*#endregion Utilities */
 
@@ -210,18 +220,21 @@ img {
 }
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
   min-width: 200px;
-  padding: 10px 32px;
+  height: 50px;
+  padding: 10px 28px;
   border: none;
   border-radius: 4px;
 
   color: var(--white-color);
   background-color: var(--accent-text-color);
+  box-shadow: var(--btn-shadow);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
   letter-spacing: 0.06em;
   cursor: pointer;
 
@@ -252,11 +265,7 @@ img {
 }
 
 .features .subtitle {
-  margin-bottom: 10px;
   color: var(--title-text-color);
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
 }
 
 .features .text {
@@ -341,9 +350,6 @@ img {
 .work-thumb .subtitle {
   margin-bottom: 0px;
   color: var(--white-color);
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
 }
 
 /* Team */
@@ -502,10 +508,6 @@ img {
 .footer .subtitle {
   margin-bottom: 20px;
   color: var(--white-color);
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-  font-weight: 700;
 }
 
 .social-list > .item:not(:last-child) {
@@ -521,6 +523,44 @@ img {
 .footer .social-link:focus {
   color: var(--white-color);
   background-color: var(--accent-text-color);
+}
+
+/* Send e-mail */
+.footer .email-field {
+  margin-left: auto;
+  display: flex;
+  align-items: flex-end;
+  width: 570px;
+}
+
+.footer-input {
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  margin-right: 12px;
+
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+  box-shadow: var(--btn-shadow);
+}
+
+.footer-input::placeholder {
+  color: var(--transparent-white-color);
+}
+
+.footer .btn::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  background-size: contain;
+  background-image: url(../images/icon-send.svg);
+  background-repeat: no-repeat;
 }
 /*#endregion Footer */
 
@@ -559,6 +599,7 @@ img {
   opacity: 1;
   min-width: 528px;
   min-height: 581px;
+  padding: 40px;
   border-radius: 4px;
   background-color: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -585,8 +626,7 @@ img {
   color: #000000;
   cursor: pointer;
 
-  transition: background-color var(--animation-duration) var(--timing-function),
-    color var(--animation-duration) var(--timing-function);
+  transition: color var(--animation-duration) var(--timing-function);
 }
 
 .modal-icon {
@@ -595,9 +635,135 @@ img {
 
 .modal-btn:hover,
 .modal-btn:focus {
-  background-color: rgba(0, 0, 0, 0.1);
-  color: var(--white-color);
+  color: var(--accent-text-color);
 }
+
+/* Modal Form */
+
+.modal-form {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-title {
+  font-size: 20px;
+  line-height: 1.15;
+  margin-bottom: 30px;
+  color: var(--title-text-color);
+}
+
+.form-field {
+  position: relative;
+  margin-bottom: 28px;
+}
+.form-field.comment {
+  margin-bottom: 20px;
+}
+
+.input {
+  width: 448px;
+  height: 40px;
+  padding: 12px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  transition: border var(--animation-duration) var(--timing-function);
+}
+
+.form-field:focus-within .input {
+  border: 1px solid var(--accent-text-color);
+  outline: none;
+}
+
+.form-label {
+  position: absolute;
+  bottom: 11px;
+  display: flex;
+  flex-direction: column;
+}
+
+.label-text {
+  margin-bottom: 15px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
+.input-icon {
+  margin-left: 12px;
+  fill: currentColor;
+  color: var(--title-text-color);
+
+  transition: color var(--animation-duration) var(--timing-function);
+}
+
+.input-icon:hover {
+  color: var(--accent-text-color);
+}
+
+.form-field:focus-within .input-icon {
+  color: var(--accent-text-color);
+}
+
+.input.comment {
+  height: 120px;
+  padding: 12px 16px;
+  resize: none;
+}
+
+.comment::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.comment-label {
+  position: absolute;
+  top: -4px;
+  transform: translateY(-100%);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
+.agreement {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.71;
+  margin-bottom: 30px;
+}
+
+.check-icon {
+  border-radius: 2px;
+  margin-right: 8px;
+  border: 2px solid var(--title-text-color);
+  background: none;
+
+  transition: background var(--animation-duration) var(--timing-function),
+    border var(--animation-duration) var(--timing-function);
+}
+
+.check-policy:checked + .check-icon {
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-color: var(--accent-text-color);
+  border: 2px solid var(--accent-text-color);
+}
+
+.check-policy:focus + .check-icon {
+  outline: 2px solid var(--accent-text-color);
+}
+.agreement a {
+  color: var(--accent-text-color);
+  margin-left: 4px;
+}
+
 /*#endregion Modal */
 
 /*#region Portfolio navigation */
@@ -622,6 +788,7 @@ img {
   letter-spacing: 0.03em;
   color: var(--title-text-color);
   background-color: var(--bgr-accent-color);
+  box-shadow: unset;
   cursor: pointer;
 
   transition: box-shadow var(--animation-duration) var(--timing-function),
@@ -650,7 +817,6 @@ img {
 /*#endregion Portfolio navigation */
 
 /*#region Portfolio cards */
-
 .gallery-card {
   flex-basis: calc((100% - 2 * var(--space-btw-elements)) / 3);
   margin-bottom: var(--space-btw-elements);
